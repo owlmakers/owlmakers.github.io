@@ -18,7 +18,7 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
 </head>
 <body>
   <h1>광고 ID 확인 (AAID) 개인정보처리방침</h1>
-  <p class="meta">시행일: 2026년 9월 6일 · 게시자: Owlmakers</p>
+  <p class="meta">시행일: 2026년 9월 6일 (개정 2026년 9월 6일 — 분석 도구 추가) · 게시자: Owlmakers</p>
 
   <p>Owlmakers(이하 "개발자")는 <strong>광고 ID 확인</strong>(이하 "본 앱")을 운영하며, 이용자의 개인정보를
   소중히 다룹니다. 본 방침은 본 앱이 어떤 정보를 처리하는지 설명합니다.</p>
@@ -52,17 +52,36 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
       (본 앱 안의 <em>광고 설정 열기</em> 버튼으로 바로 이동할 수 있습니다)</li>
   </ul>
 
-  <h2>4. 기기에 저장되는 것</h2>
+  <h2>4. 분석 도구 (Google Analytics for Firebase)</h2>
+  <p>서비스 개선을 위해 Google Analytics for Firebase(GA4)로 <strong>앱 이용 통계</strong>를 수집합니다.
+  수집되는 것은 <strong>화면 조회(어느 화면을 봤는지)와 버튼 탭 종류(복사·공유·광고 설정 열기)</strong>,
+  그리고 앱 실행 횟수·사용 시간 같은 집계 정보이며, 앱 인스턴스 ID와 함께 기록됩니다.</p>
+  <p><strong>광고 ID 값 자체는 분석 도구로 전송되지 않습니다.</strong> 두 겹으로 막았습니다.</p>
+  <ul>
+    <li>앱이 보내는 이벤트에는 값을 싣지 않습니다 — 버튼을 눌렀다는 사실만 기록합니다.
+      이는 문구상의 약속이 아니라 앱 코드가 구조적으로 차단합니다(광고 ID 형태의 값이 발견되면
+      전송 전에 제거됩니다).</li>
+    <li>Google Analytics SDK 는 기본적으로 광고 ID를 함께 전송하는데, 본 앱은
+      <strong>그 수집을 꺼 두었습니다</strong>(<code>google_analytics_adid_collection_enabled=false</code>).
+      대신 분석용으로는 앱 설치마다 새로 만들어지는 익명 식별자만 쓰입니다.</li>
+  </ul>
+  <p>다만 <strong>3항의 광고(AdMob)는 별개</strong>입니다 — 광고를 표시하려면 광고 SDK가 광고 ID를
+  사용하며, 이는 Google이 처리합니다. 광고 개인 최적화를 끄거나 광고 ID를 재설정하는 방법은 3항에 있습니다.</p>
+  <ul>
+    <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  </ul>
+
+  <h2>5. 기기에 저장되는 것</h2>
   <p>화면 테마·언어 같은 앱 설정만 기기 내부에 저장됩니다. <strong>광고 ID 는 저장하지 않습니다.</strong>
   앱을 삭제하면 저장된 설정도 함께 삭제됩니다.</p>
 
-  <h2>5. 아동의 개인정보</h2>
+  <h2>6. 아동의 개인정보</h2>
   <p>본 앱은 만 13세 미만 아동을 주된 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.</p>
 
-  <h2>6. 방침의 변경</h2>
+  <h2>7. 방침의 변경</h2>
   <p>본 개인정보처리방침은 관련 법령이나 서비스 변경에 따라 개정될 수 있으며, 변경 시 본 페이지를 통해 공지합니다.</p>
 
-  <h2>7. 문의</h2>
+  <h2>8. 문의</h2>
   <p>개인정보 관련 문의: <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></p>
 
   <hr>
@@ -95,17 +114,37 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
   <a href="https://policies.google.com/technologies/ads">Google Ads</a>. You can opt out under
   Settings &gt; Google &gt; Ads (the app's <em>Open ads settings</em> button takes you there).</p>
 
-  <h2>4. What is stored on your device</h2>
+  <h2>4. Analytics (Google Analytics for Firebase)</h2>
+  <p>We use Google Analytics for Firebase (GA4) to collect <strong>app usage statistics</strong> — which
+  screens were viewed, which buttons were tapped (copy / share / open ads settings), and aggregate figures
+  such as launches and session length, recorded against an app instance ID.</p>
+  <p><strong>The advertising ID value itself is never sent to analytics.</strong> This is enforced twice:</p>
+  <ul>
+    <li>The events the app sends never carry the value — only the fact that a button was pressed. That is
+      enforced by the app's code rather than by policy text: any value shaped like an advertising ID is
+      stripped before it can be sent.</li>
+    <li>The Google Analytics SDK transmits the advertising ID by default; this app
+      <strong>turns that collection off</strong>
+      (<code>google_analytics_adid_collection_enabled=false</code>). Analytics uses only an anonymous
+      per-installation identifier instead.</li>
+  </ul>
+  <p><strong>Advertising (section 3) is separate</strong> — serving ads requires the ad SDK to use the
+  advertising ID, and that processing is done by Google. Section 3 explains how to opt out or reset it.</p>
+  <ul>
+    <li>Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  </ul>
+
+  <h2>5. What is stored on your device</h2>
   <p>Only app preferences such as theme and language. <strong>The advertising ID is not stored.</strong>
   Uninstalling the app removes those preferences.</p>
 
-  <h2>5. Children</h2>
+  <h2>6. Children</h2>
   <p>The app is not directed at children under 13 and does not knowingly collect their personal information.</p>
 
-  <h2>6. Changes</h2>
+  <h2>7. Changes</h2>
   <p>This policy may be updated; changes will be posted on this page.</p>
 
-  <h2>7. Contact</h2>
+  <h2>8. Contact</h2>
   <p><a href="mailto:support@owlmakers.com">support@owlmakers.com</a></p>
 
   <footer>© 2026 Owlmakers · 광고 ID 확인 / AAID</footer>
