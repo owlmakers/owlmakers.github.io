@@ -21,11 +21,11 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>앱 로테이트 개인정보처리방침 — Owlmakers</h1>
-  <p class="meta">시행일: 2026년 9월 10일 · 게시자: Owlmakers · <a href="./en/">English</a></p>
-  <p>최종 수정일: 2026-09-10</p>
+  <p class="meta">시행일: 2026년 9월 15일 (개정 2026년 9월 15일 — 자체 사용 통계 추가) · 게시자: Owlmakers · <a href="./en/">English</a></p>
+  <p>최종 수정일: 2026-09-15</p>
   <h2>1. 요약</h2>
-  <p><strong>앱 로테이트는 계정도 로그인도 없습니다.</strong> 이 앱은 서버를 운영하지 않으며, 사용자가 앱에서 만든 설정(선택한 앱 목록·순서·전환 간격·자동화 옵션)은 <strong>모두 사용자의 기기 안에만</strong> 저장됩니다. 개발자는 그 내용을 볼 수 없습니다.</p>
-  <p>앱이 외부로 보내는 것은 <strong>광고</strong>와 <strong>익명 사용 통계</strong> 두 가지뿐이며, 아래에 그대로 적습니다.</p>
+  <p><strong>앱 로테이트는 계정도 로그인도 없습니다.</strong> 이 앱은 사용자 계정을 위한 서버를 운영하지 않으며, 사용자가 앱에서 만든 설정(선택한 앱 목록·순서·전환 간격·자동화 옵션)은 <strong>모두 사용자의 기기 안에만</strong> 저장됩니다. 개발자는 그 내용을 볼 수 없습니다.</p>
+  <p>앱이 외부로 보내는 것은 <strong>광고</strong>·<strong>익명 사용 통계</strong>·<strong>자체 사용 통계</strong> 세 가지뿐이며, 아래에 그대로 적습니다.</p>
   <h2>2. 기기 안에만 저장되는 것 (외부 전송 없음)</h2>
   <table>
 <tr><th>항목</th><th>왜 저장하나</th></tr>
@@ -44,6 +44,19 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <p>어떤 화면이 쓰이는지, 어떤 설정이 많이 쓰이는지를 <strong>익명 집계</strong>로 확인하기 위해 Google Analytics for Firebase 를 사용합니다.</p>
   <ul><li>보내는 것: 화면 이름, 로테이션 시작/중지 같은 <strong>동작의 종류</strong>, 전환 간격 값, 선택한 앱의 <strong>개수</strong>.</li><li>⛔ <strong>보내지 않는 것</strong>: 선택한 앱의 이름이나 패키지 이름, 기기에 설치된 앱 목록,</li></ul>
   <p>연락처·위치·전화번호·이메일 등 개인을 식별할 수 있는 정보.</p>
+
+  <h2>5-2. 자체 사용 통계 (Owlmakers)</h2>
+  <p>개발자는 앱이 정상적으로 쓰이고 있는지 확인하기 위해 <strong>자체 서버로 익명 사용 통계(국가·지역 포함)</strong>를
+  전송합니다(<code>api.owlmakers.com</code>, HTTPS).</p>
+  <ul>
+    <li>전송되는 것: 앱 이름·버전·표시 언어, 화면 이동과 버튼 탭 종류(5항과 같은 값), 앱을 쓰는 중이라는 신호,
+      그리고 <strong>앱을 실행할 때마다 새로 만들어지는 무작위 값</strong>(저장하지 않으므로 이용자나 기기를 식별하지
+      않습니다).</li>
+    <li>서버는 접속 경로에서 <strong>국가와 시·도</strong>만 기록합니다. <strong>IP 주소는 저장하지 않으며</strong>, 좌표
+      같은 정밀 위치는 받지 않습니다. 선택한 앱의 이름·패키지는 여기로도 전송되지 않습니다.</li>
+    <li>보관 기간은 1년이며, 제3자에게 제공하지 않습니다.</li>
+  </ul>
+
   <h2>6. 권한</h2>
   <table>
 <tr><th>권한</th><th>용도</th></tr>
