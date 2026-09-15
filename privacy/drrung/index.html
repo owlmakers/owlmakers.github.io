@@ -20,18 +20,18 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>드르렁 개인정보처리방침</h1>
-  <p class="meta">시행일: 2026년 8월 30일 · 게시자: Owlmakers · <a href="./en/">English</a></p>
+  <p class="meta">시행일: 2026년 9월 15일 (개정 2026년 9월 15일 — 자체 사용 통계 추가) · 게시자: Owlmakers · <a href="./en/">English</a></p>
 
   <p>Owlmakers(이하 "개발자")는 <strong>드르렁</strong>(이하 "본 앱")을 운영합니다. 본 앱은 자는 동안의 소리를
-  기록해 아침에 소리 지도로 보여주는 앱으로, <strong>서버·로그인·클라우드가 없는 온디바이스 앱</strong>입니다.
-  녹음된 소리는 이용자의 기기에만 저장됩니다.</p>
+  기록해 아침에 소리 지도로 보여주는 앱입니다. <strong>녹음된 소리는 로그인·클라우드 없이 오직 이용자의 기기에만
+  저장</strong>되며, 개발자 서버로는 아래 1항의 <strong>익명 사용 통계</strong>만 전송됩니다.</p>
 
   <div class="callout">
     <strong>핵심 요약</strong><br>
     · 녹음한 소리는 <strong>폰 밖으로 나가지 않습니다</strong> (서버 전송 없음)<br>
     · 개인을 식별하는 정보(이름·이메일·전화번호·위치)를 <strong>수집하지 않습니다</strong><br>
     · 광고 표시를 위해 Google AdMob이 광고 ID를 처리할 수 있습니다<br>
-    · 앱 이용 통계(어떤 화면을 여는지 등)를 Google Analytics for Firebase로 수집합니다 —
+    · 앱 이용 통계(어떤 화면을 여는지 등)를 Google Analytics for Firebase 와 개발자 자체 서버로 수집합니다 —
       <strong>녹음은 여기 포함되지 않습니다</strong>
   </div>
 
@@ -61,16 +61,26 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
       <td>수집하지 않음</td>
       <td>본 앱에는 계정·로그인이 없습니다.</td>
     </tr>
+    <tr>
+      <td>자체 사용 통계(개발자 서버)</td>
+      <td>수집</td>
+      <td>개발자는 앱이 정상적으로 쓰이고 있는지 확인하기 위해 <strong>자체 서버로 익명 사용 통계(국가·지역
+          포함)</strong>를 전송합니다(<code>api.owlmakers.com</code>, HTTPS). 보내는 것은 앱 이름·버전·표시
+          언어, 화면 이동과 기록 시작/종료 같은 동작 종류, 앱을 쓰는 중이라는 신호, 그리고 <strong>앱을 실행할
+          때마다 새로 만들어지는 무작위 값</strong>(저장하지 않아 이용자·기기를 식별하지 않음)입니다. 서버는
+          접속 경로에서 <strong>국가와 시·도</strong>만 기록하며 <strong>IP 주소는 저장하지 않습니다</strong>.
+          <strong>녹음된 소리와 분석 결과는 포함되지 않습니다.</strong> 보관 기간 1년, 제3자 미제공.</td>
+    </tr>
   </table>
 
   <h2>2. 이용 목적</h2>
   <p>· 소리 녹음: 수면 중 소리를 기록하고 아침에 소리 지도·재생으로 보여주기 위함(기기 내 처리)<br>
      · 광고 ID: 관련성 있는 광고 제공 및 광고 성과 측정(Google AdMob)<br>
-     · 앱 이용 통계: 서비스 이용 현황 분석 및 개선(Google Analytics for Firebase)</p>
+     · 앱 이용 통계: 서비스 이용 현황 분석 및 개선(Google Analytics for Firebase, 개발자 자체 서버)</p>
 
   <h2>3. 제3자 제공</h2>
-  <p>본 앱은 광고 제공을 위해 Google AdMob을, 이용 현황 분석을 위해 Google Analytics for Firebase를
-     사용합니다. Google의 데이터 처리는
+  <p>본 앱은 광고 제공을 위해 Google AdMob을, 이용 현황 분석을 위해 Google Analytics for Firebase와
+     개발자 자체 서버(<code>api.owlmakers.com</code>)를 사용합니다. Google의 데이터 처리는
      <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요.
      그 외 이용자의 정보를 제3자에게 판매·제공하지 않습니다.</p>
 
