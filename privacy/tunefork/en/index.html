@@ -20,22 +20,35 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>Tunefork Privacy Policy</h1>
-  <p class="meta">Effective: 17 August 2026 · Publisher: Owlmakers · <a href="../">한국어</a></p>
+  <p class="meta">Effective: 15 September 2026 (revised 15 September 2026 — own usage statistics added) · Publisher: Owlmakers · <a href="../">한국어</a></p>
 
   <p>Owlmakers ("the developer") operates <strong>Tunefork</strong> ("the app"), which measures the pitch of your
-  instrument to help you tune it and provides a metronome. It is an <strong>on-device app with no server,
-  no account and no cloud</strong>.</p>
+  instrument to help you tune it and provides a metronome. It is an <strong>on-device app with no account and
+  no cloud</strong>.</p>
 
   <div class="callout">
     <strong>Summary</strong><br>
     · The microphone is used <strong>only to calculate pitch</strong>; <strong>nothing is recorded or transmitted</strong>.<br>
-    · There is no developer-operated server, so <strong>no user information is collected or stored</strong>.<br>
+    · There is no account or sign-in, so <strong>no personally identifying information is collected or
+      stored</strong>. The only thing sent to a developer server is the <strong>anonymous usage statistics</strong>
+      in section 1 below.<br>
     · Advertising (Google AdMob) may use device identifiers, and a <strong>one-time purchase removes ads entirely</strong>.
   </div>
 
-  <h2>1. Information we do not collect</h2>
+  <h2>1. Information we do not collect / our own usage statistics</h2>
   <p>The app does not collect personally identifiable information such as your name, email address, phone number
-  or postal address. There is no sign-up, and no user information is sent to any server operated by the developer.</p>
+  or postal address. There is no sign-up.</p>
+  <p>To check that the app is working in real use, the developer sends <strong>anonymous usage statistics
+  (including country and region)</strong> to its own server (<code>api.owlmakers.com</code>, over HTTPS).</p>
+  <ul>
+    <li>What is sent: app name, version and display language; screen views and actions such as tuning or using
+      the metronome; an "in use" signal; and a <strong>random value created fresh on every launch</strong>
+      (never stored, so it identifies neither you nor your device).</li>
+    <li>The server records only the <strong>country and region</strong> of the connection. <strong>IP addresses
+      are not stored</strong>, and no precise location is received. <strong>Microphone input and pitch values
+      are not sent here either</strong> (see section 2).</li>
+    <li>Data is kept for one year and is not shared with third parties.</li>
+  </ul>
 
   <h2>2. Microphone — nothing is recorded</h2>
   <p>The app uses the microphone permission (<code>RECORD_AUDIO</code>) to work out the pitch of your instrument.</p>
