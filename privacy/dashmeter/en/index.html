@@ -20,18 +20,20 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>DashMeter Privacy Policy</h1>
-  <p class="meta">Effective 17 August 2026 · Publisher: Owlmakers · <a href="../">한국어</a></p>
+  <p class="meta">Effective 15 September 2026 (revised 15 September 2026 — own usage statistics added) · Publisher: Owlmakers · <a href="../">한국어</a></p>
 
   <p>Owlmakers ("the developer") operates <strong>DashMeter</strong> ("the app"), which uses GPS to show
   your speed, trip distance and acceleration / braking performance. It is an
-  <strong>on-device app with no server, no sign-in and no cloud</strong>.</p>
+  <strong>on-device app with no sign-in and no cloud</strong>.</p>
 
   <div class="callout">
     <strong>Summary</strong><br>
-    · Location (GPS) is used <strong>only to compute speed</strong> and coordinates are
-    <strong>never sent to a server</strong>.<br>
+    · Location (GPS) <strong>coordinates are never sent to any server</strong> — speed is computed entirely
+    on your device.<br>
     · Location is used <strong>only while the app is open</strong> (no background tracking).<br>
-    · There is no account or sign-in, so the developer holds no personal data about you.<br>
+    · There is no account or sign-in, so the developer holds no personal data about you. The only thing sent
+    to a developer server is the <strong>anonymous usage statistics</strong> in section 1b, which never
+    includes coordinates either.<br>
     · Ads (Google AdMob) use an advertising ID; purchasing the unlock removes ads entirely.
   </div>
 
@@ -54,6 +56,20 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     <tr><td>App settings</td><td>Units (km/h / mph), theme, language, unlock (purchase) state</td></tr>
   </table>
   <p>Uninstalling the app deletes this data.</p>
+
+  <h2>1b. Our own usage statistics (Owlmakers)</h2>
+  <p>To check that the app is working in real use, the developer sends <strong>anonymous usage statistics
+  (including country and region)</strong> to its own server (<code>api.owlmakers.com</code>, over HTTPS).</p>
+  <ul>
+    <li>What is sent: app name, version and display language; screen views and actions such as starting or
+      finishing a measurement; an "in use" signal; and a <strong>random value created fresh on every
+      launch</strong> (never stored, so it identifies neither you nor your device).</li>
+    <li>The server records only the <strong>country and region</strong> of the connection. <strong>IP
+      addresses are not stored</strong>, and GPS coordinates or any other precise location are
+      <strong>never received</strong> — the same rule as section 1 (coordinates never leave the device)
+      applies here too.</li>
+    <li>Data is kept for one year and is not shared with third parties.</li>
+  </ul>
 
   <h2>3. Advertising — Google AdMob</h2>
   <p>The app shows Google AdMob ads to remain free (on the Measure and Settings screens only; the drive

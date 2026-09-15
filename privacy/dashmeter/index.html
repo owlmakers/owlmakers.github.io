@@ -20,16 +20,17 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>대시미터 개인정보처리방침</h1>
-  <p class="meta">시행일: 2026년 8월 17일 · 게시자: Owlmakers · <a href="./en/">English</a></p>
+  <p class="meta">시행일: 2026년 9월 15일 (개정 2026년 9월 15일 — 자체 사용 통계 추가) · 게시자: Owlmakers · <a href="./en/">English</a></p>
 
   <p>Owlmakers(이하 "개발자")는 <strong>대시미터</strong>(이하 "본 앱")를 운영합니다. 본 앱은 GPS 로 속도·주행거리와
-  가속/제동 성능을 측정해 보여주는 앱으로, <strong>서버·로그인·클라우드가 없는 온디바이스 앱</strong>입니다.</p>
+  가속/제동 성능을 측정해 보여주는 앱으로, <strong>로그인·클라우드가 없는 온디바이스 앱</strong>입니다.</p>
 
   <div class="callout">
     <strong>핵심 요약</strong><br>
-    · 위치(GPS)는 <strong>속도 계산에만</strong> 쓰고, 좌표를 서버로 <strong>전송하지 않습니다</strong>.<br>
+    · 위치(GPS) <strong>좌표는 어떤 서버로도 전송하지 않습니다</strong> — 속도 계산은 기기 안에서만 이루어집니다.<br>
     · 앱을 <strong>열어 사용하는 동안에만</strong> 위치를 사용합니다(백그라운드 추적 없음).<br>
-    · 계정·로그인·회원가입이 없어 개발자가 보관하는 개인정보가 없습니다.<br>
+    · 계정·로그인·회원가입이 없어 개발자가 보관하는 개인정보가 없습니다. 개발자 서버로는 아래 1-2항의
+      <strong>익명 사용 통계</strong>만 전송되며, 여기에도 좌표는 포함되지 않습니다.<br>
     · 광고(Google AdMob)는 광고 ID를 사용하며, 유료 해제 시 광고가 완전히 제거됩니다.
   </div>
 
@@ -51,6 +52,19 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     <tr><td>앱 설정</td><td>단위(km/h·mph), 테마, 언어, 해제(구매) 여부</td></tr>
   </table>
   <p>앱을 삭제하면 위 정보도 함께 삭제됩니다.</p>
+
+  <h2>1-2. 자체 사용 통계 (Owlmakers)</h2>
+  <p>개발자는 앱이 정상적으로 쓰이고 있는지 확인하기 위해 <strong>자체 서버로 익명 사용 통계(국가·지역 포함)</strong>를
+  전송합니다(<code>api.owlmakers.com</code>, HTTPS).</p>
+  <ul>
+    <li>전송되는 것: 앱 이름·버전·표시 언어, 화면 이동과 측정 시작/종료 같은 동작 종류, 앱을 쓰는 중이라는 신호,
+      그리고 <strong>앱을 실행할 때마다 새로 만들어지는 무작위 값</strong>(저장하지 않으므로 이용자나 기기를 식별하지
+      않습니다).</li>
+    <li>서버는 접속 경로에서 <strong>국가와 시·도</strong>만 기록합니다. <strong>IP 주소는 저장하지 않으며</strong>,
+      GPS 좌표 등 정밀 위치는 <strong>절대 받지 않습니다</strong> — 위 1항의 원칙(좌표는 기기 밖으로 나가지 않음)이
+      이 통계에도 그대로 적용됩니다.</li>
+    <li>보관 기간은 1년이며, 제3자에게 제공하지 않습니다.</li>
+  </ul>
 
   <h2>3. 광고 — Google AdMob</h2>
   <p>본 앱은 무료 이용을 위해 Google AdMob 광고를 표시합니다(측정·설정 화면에 한하며, 주행 화면과 HUD 에는
