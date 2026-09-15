@@ -78,7 +78,7 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
     <li>전송되는 것: 앱 이름·버전·표시 언어, 화면 이동과 버튼 탭 종류(4항과 같은 값), 광고를 눌렀는지 여부(광고 형식),
       앱을 쓰는 중이라는 신호, 그리고 <strong>앱을 실행할 때마다 새로 만들어지는 무작위 값</strong>(저장하지 않으므로
       이용자나 기기를 식별하지 않습니다).</li>
-    <li>서버는 접속 경로에서 <strong>국가와 시·도</strong>만 기록합니다. <strong>IP 주소는 저장하지 않으며</strong>, 좌표 같은
+    <li>서버는 접속 경로에서 <strong>국가·시·도·도시 이름</strong>만 기록합니다. <strong>IP 주소는 저장하지 않으며</strong>, 좌표 같은
       정밀 위치는 받지 않습니다.</li>
     <li><strong>광고 ID 값은 여기로도 전송되지 않습니다</strong> — 4항과 같은 코드가 광고 ID 형태의 값을 전송 전에 제거합니다.</li>
     <li>보관 기간은 1년이며, 제3자에게 제공하지 않습니다.</li>
@@ -156,7 +156,7 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
       values as section 4); whether an ad was tapped (ad format); an "in use" signal; and a
       <strong>random value created fresh on every launch</strong> (never stored, so it identifies neither you
       nor your device).</li>
-    <li>The server records only the <strong>country and region</strong> of the connection. <strong>IP addresses
+    <li>The server records only the <strong>country, region and city name</strong> of the connection. <strong>IP addresses
       are not stored</strong>, and no precise location is received.</li>
     <li><strong>The advertising ID value is not sent here either</strong> — the same code as in section 4 strips
       any value shaped like an advertising ID before it can be sent.</li>
