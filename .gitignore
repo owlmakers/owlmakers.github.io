@@ -1,3 +1,7 @@
 .omc/
 *.log
 batch_build*
+
+# macOS / Synology Drive 가 만드는 메타 (동기화 폴더 안 모든 저장소 공통)
+.DS_Store
+@eaDir/
