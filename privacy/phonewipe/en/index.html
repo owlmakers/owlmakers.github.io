@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Wipe Free Space Before Selling — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+  <h1>Privacy Policy — Wipe Free Space Before Selling</h1>
+  <p class="meta">Last updated: October 13, 2026 · <a href="../">한국어</a></p>
+  <p>Owlmakers explains how Wipe Free Space Before Selling (com.owlmakers.phonewipe) handles information.</p>
+  <div class="callout">
+    <strong>Key points</strong><br>
+    · The app writes and cleans up its own temporary files on your device. It does not read or directly delete your personal files.<br>
+    · There is no account or sign-in, and no information is sent to a developer-operated server.<br>
+    · AdMob advertising and Google Analytics for Firebase communicate with Google. Personal file contents, names and task paths are not sent.<br>
+    · Overwriting free space does not guarantee deletion, unrecoverability or security certification and does not replace a factory reset.<br>
+  </div>
+  <h2>1. Information stored on your device</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Information</th></tr></thead>
+    <tbody>
+      <tr><td>Settings</td><td>Language, theme, selected write method and onboarding status</td></tr>
+      <tr><td>Task information</td><td>App-owned temporary file identifiers, task state, bytes written and pass number, used for cleanup when reopening the app after interruption</td></tr>
+      <tr><td>Summary history</td><td>Task time, method, actual bytes written, elapsed time, scope, reserve space and task/cleanup result</td></tr>
+      <tr><td>Local backup</td><td>A JSON file of settings and summary history only. Active sessions, task paths, temporary files and device-specific measurements are not restored</td></tr>
+    </tbody>
+  </table>
+  <p>These records are not sent to a developer server. Temporary files are created in app-private storage and cleanup is attempted after completion, stopping or reopening. Cleanup failure blocks new work. System automatic backup is disabled. On Android 29 and later, changes to settings and summary history update phone_wipe_backup.json in Downloads; manual backup creates a dated copy. Android 28 and earlier use a save dialog. Backups are unencrypted JSON and may contain task times, but not personal files or temporary task files. Backups in Downloads can remain after uninstalling the app and must be deleted separately with a file manager. If you move or share a backup through another service, that service’s policy applies.</p>
+  <h2>2. Measurements and permissions</h2>
+  <ul>
+    <li>Available internal storage, battery level and thermal status are measured locally to determine whether a task can run and show progress. Raw measurements and detailed records are not included in usage statistics.</li>
+    <li>Foreground service and notification permissions are used to show an ongoing task. No remote push notifications are used.</li>
+    <li>Advertising and Google analytics SDKs use internet, network-state and advertising-ID permissions.</li>
+    <li>The app does not request location, camera, microphone, contacts, account or all-files access. You select a backup to restore through the system file picker.</li>
+  </ul>
+  <h2>3. Advertising — Google AdMob</h2>
+  <ul>
+    <li>Ads appear at the top and as native ads in the exit confirmation. No full-screen ad interrupts writing or cleanup.</li>
+    <li>Google SDKs may collect and share IP addresses (including approximate-location estimates), advertising IDs and other device identifiers, advertising/app interactions and diagnostics. Personal file contents and names are not supplied to ads.</li>
+    <li>Advertising data policy: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+    <li>Where required, Google UMP requests advertising consent before the advertising SDK starts. Eligible users can change their choices in the advertising privacy settings.</li>
+    <li>Advertising IDs can be deleted/reset and personalization changed in device Settings → Google → Ads.</li>
+  </ul>
+  <h2>4. Usage statistics — Google Analytics for Firebase</h2>
+  <ul>
+    <li>Custom events contain screen transitions and fixed write-method names, pass counts and start/result names. They do not contain personal files, file names, backup contents, task paths, task times or detailed byte counts.</li>
+    <li>Google may process app-instance IDs, device/app information, sessions, interactions, advertising IDs and IP-based approximate region information automatically. We do not guarantee these data are fully anonymous.</li>
+    <li>The developer uses aggregated statistics to understand usage and reliability. Google privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+    <li>Developer-server monitoring is disabled.</li>
+  </ul>
+  <h2>5. Retention and deletion</h2>
+  <p>Use the app's history deletion function to delete local summary history. Device Settings → App info → Storage → Clear data, or uninstalling the app, removes local settings, history and temporary files. Exported backups must be deleted separately through your file manager or destination service. Information processed by Google SDKs follows Google policies and advertising/analytics settings. We do not promise that the developer can identify and individually delete a particular user's SDK records.</p>
+  <h2>6. Children, updates and changes</h2>
+  <p>The app is not directed to children under 14. Update notices use Google Play in-app updates. Changes to this policy are posted on this page.</p>
+  <h2>7. Contact</h2>
+  <ul>
+    <li>Developer: Owlmakers</li>
+    <li>Email: <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></li>
+  </ul>
+  <footer>© 2026 Owlmakers</footer>
+</body>
+</html>
