@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 숫자 세기 - 햅틱 카운터 — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+  <h1>개인정보처리방침 — 숫자 세기 - 햅틱 카운터</h1>
+  <p class="meta">최종 수정일: 2026년 10월 13일 · <a href="./en/">English</a></p>
+  <p>Owlmakers는 「숫자 세기 - 햅틱 카운터」(Tally Counter - Haptic Click)의 정보 처리 방침을 안내합니다.</p>
+  <div class="callout">
+    <strong>핵심 요약</strong><br>
+    · 계정·로그인·카운터 기능용 서버가 없습니다. 진행 중인 값과 완료 기록, 설정은 사용자 기기에 저장합니다.<br>
+    · 흔들기 센서는 사용자가 시작하고 앱이 전경에 있는 동안만 사용합니다. 화면을 떠나거나 앱이 배경으로 가면 중지하며 자동 재시작하지 않습니다. 센서 원본을 보관·전송하지 않습니다.<br>
+    · 광고(Google AdMob), Google Analytics for Firebase, 공용 이용 현황 계측(Pulse)을 사용합니다. 이름·백업 내용·센서 원본은 전송하지 않습니다.<br>
+  </div>
+  <h2>1. 기기에 저장하는 정보</h2>
+  <p>세기 이름·현재 값·목표·직전 값, 완료 기록(값·목표·일시), 진동·화면 켜짐·감도·언어·테마 설정과 온보딩 확인 여부를 기기에 저장합니다. 백업에는 설정과 기록이 포함되며 다운로드 폴더에 저장됩니다. 복원 전에는 기존 데이터의 안전 사본을 앱 내부에 남깁니다.</p>
+  <p>결과 이미지는 사용자가 저장하거나 공유할 때 생성합니다. 공유는 사용자가 기기 공유 창에서 고른 앱으로 전달되며 그 앱의 방침을 따릅니다.</p>
+  <h2>2. 흔들기와 권한</h2>
+  <p>가속도 센서는 명시적으로 시작한 전경 세기 동안만 읽습니다. 상시·배경 센서 수집은 없습니다. 진동을 위한 VIBRATE 권한을 사용하며 카메라·마이크·위치·연락처·계정 권한이나 푸시 알림은 사용하지 않습니다. 백업 복원은 사용자가 고른 파일만 읽습니다. 광고·통계에는 인터넷·네트워크 상태·광고 ID 권한을 사용합니다.</p>
+  <h2>3. 광고</h2>
+  <p>상단 배너와 종료 확인 화면에 Google AdMob 광고가 표시될 수 있습니다. 광고 SDK는 광고 제공·분석·사기 방지를 위해 광고 ID·앱 세트 ID, IP 주소(대략적 지역 추정), 앱 상호작용과 진단 정보를 수집·공유할 수 있습니다. 전송은 TLS로 보호됩니다. 세기 이름과 센서 원본은 광고에 넣지 않습니다.</p>
+  <p>광고 동의가 필요한 지역에서는 UMP 동의 절차를 먼저 처리한 뒤 광고 SDK를 시작합니다. 제공되는 경우 설정의 광고 개인정보 설정에서 선택을 변경할 수 있습니다.</p>
+  <p>Google 광고 처리: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+  <h2>4. 이용 통계</h2>
+  <p>Firebase Analytics는 화면 조회, 세기 증가·감소·목표 도달·완료·흔들기 시작의 행동 이름과 개수를 수집합니다. SDK 자동 수집에는 설치본별 앱 인스턴스 ID·광고 ID·세션·기기와 앱 정보·IP로 추정한 대략적 지역이 포함될 수 있습니다. 세기 이름·파일 경로·백업 내용·센서 원본·정밀 위치는 보내지 않습니다. Google의 처리 방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+  <p>Pulse는 <a href="https://api.owlmakers.com/v1/pulse">https://api.owlmakers.com/v1/pulse</a> 로 앱·버전·표시 언어·화면·행동 이름과 개수·광고 클릭 형식·사용 중 신호를 보냅니다. 실행마다 새로 생성되는 임시 세션 ID를 사용하며 영구 기기 ID는 보내지 않습니다. 서버는 국가·지역·도시 이름만 집계하며 IP·좌표를 보관하지 않습니다. 원본 이용 통계 보관 기간은 1년이며 목적은 이용 현황 분석입니다. 이 공용 계측 서버가 응답하지 않아도 카운터 기능은 동작합니다.</p>
+  <h2>5. 삭제와 선택</h2>
+  <p>기기 설정의 앱 데이터 지우기 또는 앱 제거로 내부 데이터를 삭제합니다. 다운로드 폴더의 백업 파일과 저장한 결과 이미지는 별도로 삭제해야 하며 앱 제거 뒤 남을 수 있습니다. 기록은 앱 안에서 삭제할 수 있습니다. 광고 ID는 기기의 Google 광고 설정에서 초기화하거나 삭제할 수 있습니다. 개발자 계정이 없으므로 계정 삭제 기능은 없습니다. 문의 시 기록 이름이나 백업 원문을 보내지 않아도 됩니다.</p>
+  <h2>6. 아동 및 변경</h2>
+  <p>본 앱은 만 14세 미만 아동을 대상으로 하지 않습니다. 방침 변경은 이 페이지에 고지합니다.</p>
+  <h2>7. 문의</h2>
+  <p>개발자 Owlmakers · <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></p>
+  <footer>© 2026 Owlmakers</footer>
+</body>
+</html>
