@@ -33,7 +33,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <ul>
     <li>The App reads only the photos you pick in the photo picker. Cropping and saving happen entirely <strong>on your device</strong>.</li>
     <li>Original photos are never overwritten. Cropped results are saved as <strong>new files</strong> in your photo library (<code>Pictures/PhotoCrop</code> folder).</li>
-    <li>New photos saved by the App do not include the original's EXIF metadata such as GPS location. Orientation is applied to the saved image.</li>
+    <li>New photos saved by the App keep the original's capture time, GPS location, camera information (EXIF) and file name (only <code>_crop</code> is added after the name). This information stays inside the photo file and is not sent to the Developer; if you share a saved photo, its location may be shared with it. Orientation is applied to the saved image.</li>
     <li>Photos, file names, photo addresses (URIs) and locations are never put into ad requests or usage statistics.</li>
   </ul>
   <h2>2. Information stored on your device</h2>
