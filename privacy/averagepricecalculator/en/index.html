@@ -20,13 +20,13 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>Stock Average Calculator Privacy Policy</h1>
-  <p class="meta">Effective date: 11 October 2026 · Publisher: Owlmakers · <a href="../">한국어</a></p>
+  <p class="meta">Effective date: 15 October 2026 · Publisher: Owlmakers · <a href="../">한국어</a></p>
 
   <p>Owlmakers ("the developer") operates <strong>Stock Average Calculator (평단 계산기)</strong> ("the app"). The app calculates stock, ETF, and crypto average prices, staged split buys, and target share quantities. It is an <strong>on-device calculator app with no accounts and no cloud upload</strong>.</p>
 
   <div class="callout">
     <strong>Summary</strong><br>
-    · <strong>Your entered quantities, buy prices, target prices, currency settings, and stock memos never leave your device</strong> — all calculations and history storage run locally on your phone.<br>
+    · <strong>Your entered quantities, buy prices, target prices and currency settings never leave your device</strong> — all calculations and history storage run locally on your phone. The only exception is the optional "Fetch current price" feature, which sends <strong>just the ticker name or code</strong> to the price provider (Upbit / Naver Finance) — see section 2.<br>
     · There are no accounts or sign-ups; the developer holds no personal information about you.<br>
     · Local JSON file backup and restore only run when you explicitly export or import a file via your device's file picker or share sheet.<br>
     · Ads (Google AdMob) use your Advertising ID, and anonymous usage analytics (Firebase Analytics) never include your calculation numbers or memos.
@@ -35,12 +35,25 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <h2>1. Calculation Inputs and Saved History — they never leave your device</h2>
   <p>The app requires no sensitive device permissions and performs all exact rational arithmetic locally on your device.</p>
   <ul>
-    <li>Your entered quantities, buy prices, target prices, currency settings, and ticker memos are <strong>never sent</strong> to the developer's servers or to any third party.</li>
+    <li>Your entered quantities, buy prices, target prices and currency settings are <strong>never sent</strong> to the developer's servers or to any third party. Ticker memos are also stored only on your device; the ticker name is used for a price lookup only when you use the optional "Fetch current price" feature (section 2).</li>
     <li>All average price calculations, split-buy comparisons, target share reverse calculations, and history logs run <strong>100% on your device (on-device)</strong>.</li>
     <li>JSON file backup and restore operate only when you explicitly initiate an export or import through your device's system file dialog.</li>
   </ul>
 
-  <h2>2. Data stored on your device</h2>
+  <h2>2. Fetching the current price — what is sent to price providers</h2>
+  <p>This is an <strong>optional feature</strong>. It runs only when you type in the ticker field, tap a suggested ticker, or tap "Fetch". If you do not use it, the app makes no such requests.</p>
+  <table>
+    <thead><tr><th>Item</th><th>Contents</th></tr></thead>
+    <tbody>
+      <tr><td>What is sent</td><td>The <strong>ticker name (or code)</strong> you typed or selected</td></tr>
+      <tr><td>Sent to</td><td>Crypto: Upbit (Dunamu) public market data · Korean stocks: Naver Finance</td></tr>
+      <tr><td>Purpose</td><td>Showing the current price (app functionality)</td></tr>
+      <tr><td>Not sent</td><td>Quantities, buy prices, amounts, results, advertising ID</td></tr>
+    </tbody>
+  </table>
+  <p>The app contacts these services directly; the developer does not receive or store these requests. As with any internet request, the service can see technical connection data such as your IP address, which is handled under that service's own policy. Prices are for reference only, may be delayed, and are not investment advice.</p>
+
+  <h2>3. Data stored on your device</h2>
   <p>The following stays <strong>on your device only</strong> and is never transmitted externally.</p>
   <table>
     <thead><tr><th>Item</th><th>Contents</th></tr></thead>
@@ -51,7 +64,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   </table>
   <p>Clearing app storage or uninstalling the app deletes this data.</p>
 
-  <h2>3. Advertising — Google AdMob</h2>
+  <h2>4. Advertising — Google AdMob</h2>
   <p>The app displays Google AdMob ads to remain free.</p>
   <ul>
     <li>AdMob may collect an <strong>advertising ID (AAID) and device information</strong> to serve ads.</li>
@@ -62,7 +75,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     <li>Users in the EEA and the UK are shown a consent (UMP) dialog on first launch.</li>
   </ul>
 
-  <h2>4. Usage analytics (Google Analytics for Firebase)</h2>
+  <h2>5. Usage analytics (Google Analytics for Firebase)</h2>
   <p>This app uses <strong>Google Analytics for Firebase</strong> to collect anonymous usage statistics so the app can be improved.</p>
   <ul>
     <li><strong>What is collected</strong> — anonymous screen/usage events and a randomly assigned app instance ID per installation.</li>
@@ -70,13 +83,13 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     <li><strong>Who processes it</strong> — Google performs the collection and processing; the developer only views aggregated statistics in which individuals are not identifiable. Google's privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
   </ul>
 
-  <h2>5. Children under 14</h2>
+  <h2>6. Children under 14</h2>
   <p>The app is not directed at children under 14 and does not knowingly collect their personal data.</p>
 
-  <h2>6. Your rights</h2>
+  <h2>7. Your rights</h2>
   <p>The app has no accounts and no sign-in, so the developer holds no personal data about you. You can delete on-device data at any time using "Clear all history" inside the app, clearing app storage, or uninstalling the app.</p>
 
-  <h2>7. Contact &amp; Changes</h2>
+  <h2>8. Contact &amp; Changes</h2>
   <ul>
     <li>Email: <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></li>
     <li>Developer: Owlmakers</li>
