@@ -55,7 +55,8 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <ul>
     <li><strong>전달되는 정보</strong>: 공유하기로 고른 카드의 결제 일시·금액·가맹점·승인번호·분류(해외 결제는 원래 통화·외화 금액·환산 추정 여부 포함), 카드 설명(카드사·별칭·끝 4자리), 연결 때 이용자가 정한 표시 이름, 보내기·받기 승인 상태. <strong>문자·알림 원문은 전달되지 않습니다.</strong></li>
     <li><strong>어떻게 보호되나</strong>: 위 정보는 기기에서 만든 비밀키로 <strong>종단 간 암호화(AES-256-GCM)</strong>되어 올라갑니다. 비밀키는 초대 코드로 한 번 감싸서 두 폰에만 전달되고, 각 폰의 안드로이드 보안 저장소에 두며 자동 백업에 포함되지 않습니다. <strong>운영자와 Google 을 포함해 두 폰 밖의 누구도 암호를 풀어 내용을 읽을 수 없습니다.</strong></li>
-    <li><strong>어디에 두나</strong>: Google LLC 가 운영하는 Cloud Firestore(서울 리전)를 우편함으로 씁니다. 운영자는 자체 서버를 두지 않습니다. 이 과정에서 앱이 만든 임의의 익명 식별자(Firebase 익명 로그인)와 기기 임의 번호, 올린 시각·크기 같은 <strong>내용과 무관한 정보</strong>는 Google 쪽에서 처리될 수 있습니다.</li>
+    <li><strong>어디에 두나</strong>: Google LLC 가 운영하는 Cloud Firestore(서울 리전)를 우편함으로 씁니다. 운영자는 자체 서버를 두지 않으며, 아래 알림 신호를 보내는 작은 함수 하나만 Google 클라우드 위에서 돕니다. 이 과정에서 앱이 만든 임의의 익명 식별자(Firebase 익명 로그인)와 기기 임의 번호, 올린 시각·크기 같은 <strong>내용과 무관한 정보</strong>는 Google 쪽에서 처리될 수 있습니다.</li>
+    <li><strong>알림 신호(푸시)</strong>: 상대 폰이 결제를 올리거나 연결 상태를 바꾸면, Google 이 운영하는 클라우드 함수(Cloud Functions)가 상대 폰에 «새 내용이 있으니 확인하라»는 신호만 Firebase 클라우드 메시징(FCM)으로 보냅니다. <strong>신호에는 결제·이름 등 어떤 내용도 담기지 않습니다.</strong> 이를 위해 이 폰의 푸시 주소(FCM 등록 토큰 — 설치마다 부여되는 임의 문자열)가 폰 연결 제어 문서에 <strong>암호화 없이</strong> 올라가며 함수가 읽습니다. 연결을 끊으면 제어 문서와 함께 지워지고, 쓸 수 없게 된 토큰은 함수가 지웁니다. 신호를 못 받는 경우(앱 강제 종료·절전 제한)에는 1시간마다 또는 앱을 열 때 가져옵니다.</li>
     <li><strong>보관·삭제</strong>: 받는 폰이 가져가면 그 즉시 우편함에서 지우며, 가져가지 않은 것도 올린 폰의 앱이 올린 지 최대 30일 안에 지웁니다(앱을 열지 않으면 더 남을 수 있음). 초대 코드는 10분 뒤 쓸 수 없고 수락되면 삭제되며, 수락되지 않은 초대 문서는 암호화된 채 남을 수 있습니다. 연결을 끊으면 이 폰의 비밀키가 삭제되고 올린 메시지와 이 폰의 제어 문서가 지워지며(오프라인 등으로 지우지 못하면 앱이 다음에 다시 지웁니다), 먼저 끊은 쪽의 «떠났다» 표시(암호화됨)는 상대가 끊을 때 함께 지워집니다(상대가 끊지 않고 앱을 지우면 암호화된 제어 문서 1개가 남을 수 있습니다).</li>
     <li><strong>받는 쪽의 데이터</strong>: 상대 폰에서 받은 결제는 받은 폰에 기기 내부 데이터로 저장되며(위 「가」와 같음), <strong>연결을 끊어도 지워지지 않고</strong> 이쪽 앱에서 직접 삭제하거나 앱 데이터를 지울 때까지 남습니다. <strong>연결은 믿는 사람과만 맺어 주세요.</strong></li>
     <li><strong>끄는 법</strong>: [설정] → [폰 연결]에서 보내기·받기 승인을 끄거나, 일시 중지하거나, 연결을 끊을 수 있습니다.</li>
@@ -104,7 +105,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     <thead><tr><th>제공/위탁받는 자</th><th>이용 목적</th><th>처리되는 항목</th><th>근거 및 보유기간</th></tr></thead>
     <tbody>
       <tr><td><strong>Google LLC (Google AdMob, Firebase)</strong></td><td>인앱 광고 게재, 광고 성과 분석, 앱 사용 통계 측정</td><td>광고 식별자(ADID), 기기 사양, IP 주소, 앱 인터랙션 데이터</td><td>Google 개인정보처리방침 준수 (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)</td></tr>
-      <tr><td><strong>Google LLC (Firebase 익명 로그인·Cloud Firestore)</strong> — 폰 연결을 켠 경우에만</td><td>종단 간 암호화된 결제 정보·제어 정보를 두 폰 사이에 전달하는 우편함</td><td>암호문(운영자·Google 이 읽을 수 없음), 익명 식별자, 올린 시각·크기</td><td>받으면 즉시·늦어도 30일 안에 삭제(2-다). Google 개인정보처리방침 준수</td></tr>
+      <tr><td><strong>Google LLC (Firebase 익명 로그인·Cloud Firestore·Cloud Functions·클라우드 메시징)</strong> — 폰 연결을 켠 경우에만</td><td>종단 간 암호화된 결제 정보·제어 정보를 두 폰 사이에 전달하는 우편함, 상대 폰에 «확인하라» 신호 전달</td><td>암호문(운영자·Google 이 읽을 수 없음), 익명 식별자, 올린 시각·크기, 이 폰의 푸시 주소(FCM 등록 토큰 — 암호화 없음, 신호에는 내용 없음)</td><td>받으면 즉시·늦어도 30일 안에 삭제(2-다). Google 개인정보처리방침 준수</td></tr>
       <tr><td><strong>OwlMakers (자체 Pulse 모니터링)</strong></td><td>앱 기능 오류 감지 및 화면 이용 빈도 측정</td><td>임의 난수 세션 ID, 화면 및 버튼 이벤트 코드, 언어 설정</td><td>통계 분석 목적 집계 후 관리</td></tr>
     </tbody>
   </table>
