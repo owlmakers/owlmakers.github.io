@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 로또 번호 생성기 — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+  <h1>개인정보처리방침 — 로또 번호 생성기</h1>
+  <p class="meta"><strong>최종 수정일: 2026년 10월 21일</strong> · <a href="./en/">English</a></p>
+  <p>Owlmakers는 「로또 번호 생성기」(Lotto Number Generator)의 정보 처리 방침을 안내합니다. 이 앱은 동행복권과 관계없는 비공식 앱이며 복권을 판매하지 않습니다.</p>
+  <div class="callout">
+    <strong>요약</strong><br>
+    · 계정·로그인용 서버가 없습니다. 뽑은 번호, 내 번호, 기록과 설정은 사용자 기기에 저장합니다.<br>
+    · 카메라와 선택한 사진은 기기 안에서 QR 코드를 읽는 데에만 사용하며, 영상을 녹화하거나 개발자 서버로 올리지 않습니다.<br>
+    · 광고(Google AdMob), Google Analytics for Firebase, 공용 이용 현황 계측(Pulse)을 사용합니다. 저장된 번호·QR 내용·사진은 전송하지 않습니다.
+  </div>
+  <h2>1. 기기에 저장하는 정보</h2>
+  <p>내 번호에는 회차, 게임별 번호, 출처(뽑기·QR·직접 입력), 등록 시각을 저장합니다. 뽑은 기록은 번호와 시각을 최근 100건까지 보관합니다. 게임 수, 고정·제외 번호, 마지막 결과, 연출·언어·테마·알림 시각 설정, 광고 표시 간격과 배너 숨김 시각, 추가로 불러온 회차 결과도 기기에 저장합니다.</p>
+  <p>백업은 이 값들을 JSON 파일로 내보냅니다. 번호·기록·설정이 포함되며 암호화하지 않은 일반 텍스트입니다. Android 10 이상에서는 다운로드 폴더에 저장되므로 파일을 옮기거나 보관할 때 접근할 수 있는 사람을 확인해 주세요. 복원은 사용자가 고른 백업 파일을 읽고, 확인한 뒤 기존 데이터를 바꿉니다.</p>
+  <p>결과 이미지 저장을 선택하면 번호·생성 일시·앱 이름이 들어간 이미지를 갤러리의 <code>Pictures/Lotto</code> 앨범에 저장합니다. 공유를 선택하면 번호나 회차 결과 글, 또는 앱 소개와 스토어 링크를 기기의 공유 창으로 넘기며, 이후 처리는 사용자가 고른 앱의 방침을 따릅니다. 번호 복사는 시스템 클립보드를 사용합니다.</p>
+  <h2>2. 카메라·사진과 권한</h2>
+  <p>카메라는 당첨 확인 화면이 보이고 앱이 전면에 있을 때에만 QR 코드를 읽는 데 사용합니다. 프레임과 선택한 사진은 기기 안에서 처리하며(Google ML Kit), 영상을 녹화하거나 사진·영상 원본을 개발자 서버로 보내지 않습니다. 읽은 회차와 게임 번호만 내 번호에 저장합니다.</p>
+  <p>「사진에서 읽기」를 쓰면 사진 선택 과정에서 선택한 파일의 사본이 앱 캐시에 만들어질 수 있으며, 앱이 이를 즉시 지우지는 않습니다. 원본이 클라우드 저장소에 있는 경우 그 서비스의 정책이 적용될 수 있습니다.</p>
+  <p>카메라 권한은 QR 읽기에, 알림 권한과 부팅 수신은 사용자가 정한 요일·시각의 기기 안 알림(판매 마감·추첨 안내)에 사용합니다. 이 알림은 서버가 보내는 푸시가 아닙니다. 위치·연락처·마이크·계정 권한은 사용하지 않습니다. 인터넷·광고 ID 권한은 회차 조회, 광고, 이용 통계에 사용합니다.</p>
+  <h2>3. 광고</h2>
+  <p>배너, 목록·결과·종료 화면의 네이티브 광고, 작업 완료 뒤 전면 광고, 사용자가 선택하는 배너 숨김 보상형 광고가 표시될 수 있습니다. 광고 SDK는 광고 제공·분석·사기 방지를 위해 광고 ID·앱 세트 ID, IP 주소(대략적 지역 추정), 앱 상호작용과 진단 정보를 수집·공유할 수 있습니다. 전송은 TLS로 보호됩니다. 저장된 번호와 QR 내용은 광고에 넣지 않습니다.</p>
+  <p>광고 동의가 필요한 지역에서는 UMP 동의 절차를 먼저 처리한 뒤 광고 SDK를 시작합니다. 제공되는 경우 설정의 광고 개인정보 설정에서 선택을 바꿀 수 있고, 광고 ID는 기기의 Google 광고 설정에서 관리할 수 있습니다.</p>
+  <p>Google 광고 처리: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+  <h2>4. 이용 통계</h2>
+  <p>Firebase Analytics는 화면 조회와 버튼 동작의 이름·횟수를 수집합니다. SDK 자동 수집에는 설치본별 앱 인스턴스 ID·광고 ID·세션·기기와 앱 정보·IP로 추정한 대략적 지역이 포함될 수 있습니다. 저장된 번호·QR 내용·사진·백업 내용·정밀 위치는 보내지 않습니다. Google의 처리 방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+  <p>Pulse는 <a href="https://api.owlmakers.com/v1/pulse">https://api.owlmakers.com/v1/pulse</a> 로 앱 이름·버전·표시 언어·화면과 동작 이름·광고 반응·사용 중 신호를 보냅니다. 실행마다 새로 만드는 임시 세션 ID를 쓰며 영구 기기 ID는 보내지 않습니다. 서버는 IP 주소를 저장하지 않고 국가·지역·도시 이름만 집계하며, 원본 이용 통계는 1년 동안 보관한 뒤 삭제합니다. 목적은 이용 현황 분석입니다. 이 서버가 응답하지 않아도 앱 기능은 동작합니다.</p>
+  <p>QR 읽기에 쓰는 Google ML Kit는 기기·앱 정보와 설치별 식별자, 성능·오류 같은 진단 및 이용 통계 데이터를 처리할 수 있습니다. Google은 이 정보에 HTTPS를 쓰며 제3자와 공유하지 않는다고 안내합니다. 자세한 내용: <a href="https://developers.google.com/ml-kit/android-data-disclosure">https://developers.google.com/ml-kit/android-data-disclosure</a></p>
+  <h2>5. 회차 정보 조회</h2>
+  <p>회차 결과를 표시하기 위해 동행복권(dhlottery.co.kr)과 <code>smok95.github.io</code> 에 회차 번호가 들어간 HTTPS 요청을 보냅니다. 앱에 없는 최신 회차가 있을 때 앱을 열거나 당첨 확인 화면을 보거나 다시 시도할 때에만 조회합니다. 상대 서버에는 접속 IP가 전달될 수 있습니다. 동행복권 공식 사이트나 스토어 링크를 열거나 앱 업데이트를 받을 때에는 해당 서비스의 처리 방침이 적용됩니다.</p>
+  <h2>6. 삭제와 선택</h2>
+  <p>내 번호와 뽑은 기록은 앱에서 지울 수 있고, 기기 설정의 앱 데이터 지우기 또는 앱 제거로 내부 데이터를 삭제합니다. 다운로드 폴더의 백업 파일과 갤러리에 저장한 이미지는 별도로 삭제해야 하며 앱 제거 뒤에도 남을 수 있습니다. 카메라·알림 권한은 기기 설정에서 끌 수 있습니다. 앱 자체 계정이 없으므로 계정 삭제 기능은 없습니다. 문의할 때 QR 원문·사진·백업 파일을 보내지 않아도 됩니다.</p>
+  <h2>7. 연령과 변경</h2>
+  <p>이 앱은 만 19세 미만을 대상으로 하지 않습니다. 방침이 바뀌면 이 페이지에 알립니다.</p>
+  <h2>8. 문의</h2>
+  <p>개발자 Owlmakers · <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></p>
+  <footer>© 2026 Owlmakers</footer>
+</body>
+</html>
