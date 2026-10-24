@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 테슬라 패드 — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+  <h1>개인정보처리방침 — 테슬라 패드</h1>
+  <p class="meta">최종 수정일: 2026년 10월 24일 · <a href="./en/">English</a></p>
+  <p>Owlmakers는 「테슬라 패드」(com.owlmakers.teslapad)의 정보 처리 방법을 안내합니다. 이 앱은 비공식 앱이며 Tesla, Inc.와 제휴·후원 관계가 없습니다.</p>
+  <div class="callout">
+    <strong>핵심 요약</strong><br>
+    · 차량과는 블루투스로 직접 통신하며, 차량 명령·상태·위치를 개발자 서버로 보내지 않습니다.<br>
+    · 계정·로그인이 없고, 차량 인증 키는 기기의 보안 키 저장소에만 둡니다.<br>
+    · 위치 권한은 주변 블루투스 기기(내 차)를 찾기 위한 것이며 위치를 수집·전송하지 않습니다.<br>
+    · 광고(AdMob)와 이용 통계(Google Analytics for Firebase)·자체 사용 현황(Owl Pulse)은 아래 3~5항대로 통신합니다.<br>
+  </div>
+  <h2>1. 기기에 저장되는 정보</h2>
+  <table>
+    <thead><tr><th>항목</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td>차량 정보</td><td>사용자가 입력한 차량 식별번호(VIN)와 차량 이름. 연결할 차량의 블루투스 이름을 계산하는 데만 사용</td></tr>
+      <tr><td>차량 인증 키</td><td>차량에 등록한 기기 전용 개인키. 안드로이드 키 보관소(Keystore)에 있으며 앱 밖으로 내보내지 않음</td></tr>
+      <tr><td>설정·패널</td><td>언어·테마, 패널 버튼 배치, 자동화 규칙, 동작 기록</td></tr>
+      <tr><td>백업 파일</td><td>사용자가 백업을 실행하면 설정·패널·기록을 담은 JSON 파일을 다운로드 폴더에 저장. 차량 인증 키는 포함하지 않음. 앱을 지워도 남을 수 있어 파일 관리 앱에서 직접 삭제</td></tr>
+    </tbody>
+  </table>
+  <p>위 정보는 개발자 서버로 전송되지 않습니다. 시스템 자동 백업은 사용하지 않습니다.</p>
+  <h2>2. 권한</h2>
+  <ul>
+    <li><strong>근처 기기(블루투스 스캔·연결)</strong>: 차량을 찾고 연결해 명령을 보내기 위해 사용합니다.</li>
+    <li><strong>위치(정확한 위치)</strong>: 안드로이드가 주변 블루투스 기기 검색에 요구하는 권한이며 차량을 찾는 용도로만 씁니다. 위치 값을 읽어 저장하거나 서버로 보내지 않습니다.</li>
+    <li>인터넷·네트워크 상태·광고 ID 관련 권한은 광고와 Google 통계 SDK, 사용 현황 전송이 사용합니다.</li>
+    <li>카메라·마이크·연락처·계정·저장소 전체 접근 권한을 요청하지 않습니다.</li>
+  </ul>
+  <h2>3. 광고 — Google AdMob</h2>
+  <ul>
+    <li>화면 하단 배너, 목록 사이·화면 중간의 네이티브 광고, 종료 확인 화면 광고, 작업 완료 뒤 전면 광고, 보상형 광고(배너 숨기기)를 사용합니다. 전체 화면 광고는 차량이 정차해 있을 때만 표시하도록 제한합니다.</li>
+    <li>Google SDK는 IP 주소(대략적인 위치 추정 포함), 광고 ID 등 기기 식별자, 광고와 앱 상호작용, 진단 정보를 수집·공유할 수 있습니다. 차량 정보와 VIN은 광고에 전달되지 않습니다.</li>
+    <li>광고 데이터 처리: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+    <li>지역별로 필요한 광고 동의는 Google UMP를 통해 요청합니다. 기기 설정의 Google → 광고에서 광고 ID를 삭제·재설정하거나 개인화 설정을 변경할 수 있습니다.</li>
+  </ul>
+  <h2>4. 이용 통계 — Google Analytics for Firebase</h2>
+  <ul>
+    <li>화면 전환과 기능 사용(버튼·동작 이름과 성공·실패 결과) 같은 이용 흐름을 통계로 수집합니다. VIN·차량 인증 키·위치는 이벤트에 넣지 않습니다.</li>
+    <li>Google은 앱 인스턴스 ID, 기기·앱 정보, 광고 ID와 IP 기반 대략적인 지역 등 SDK 자동 수집 정보를 처리할 수 있습니다. 완전히 익명인 정보라고 보장하지 않습니다.</li>
+    <li>Google 처리 방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  </ul>
+  <h2>5. 자체 사용 현황 — Owl Pulse</h2>
+  <ul>
+    <li>전송 대상: <code>https://api.owlmakers.com/v1/pulse</code></li>
+    <li>수집 항목: 앱 패키지명·버전·표시 언어, 앱 실행 때마다 새로 만드는 임의의 세션 ID(기기 고유 식별자 아님), 화면 전환·버튼 식별 코드·앱 활성 상태 신호.</li>
+    <li>서버는 접속 IP에서 국가·지역 이름만 통계에 쓰며 IP 주소 자체와 위경도는 저장하지 않습니다. VIN·차량 키·차량 상태 값·이름·연락처는 포함하지 않습니다.</li>
+  </ul>
+  <h2>6. 삭제와 보관</h2>
+  <p>앱 정보 → 저장공간 → 데이터 삭제 또는 앱 제거로 기기 안의 설정·차량 정보·인증 키를 지울 수 있습니다. 차량의 등록된 키는 차량 화면에서 따로 삭제합니다. 사용자가 만든 백업 파일은 파일 관리 앱에서 별도로 삭제해야 합니다. Google SDK가 처리한 정보의 보관·삭제는 Google 정책 및 광고·통계 설정을 따르며 개발자가 개별 사용자를 식별해 삭제할 수 있다고 약속하지 않습니다.</p>
+  <h2>7. 아동·변경</h2>
+  <p>본 앱은 만 14세 미만 아동을 대상으로 하지 않습니다. 방침 변경은 이 페이지에 게시합니다.</p>
+  <h2>8. 문의</h2>
+  <ul>
+    <li>개발자: Owlmakers</li>
+    <li>이메일: <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></li>
+  </ul>
+  <footer>© 2026 Owlmakers</footer>
+</body>
+</html>

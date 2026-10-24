@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Tesla Pad — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+  <h1>Privacy Policy — Tesla Pad</h1>
+  <p class="meta">Last updated: October 24, 2026 · <a href="../">한국어</a></p>
+  <p>Owlmakers explains how "Tesla Pad" (com.owlmakers.teslapad) handles information. This is an unofficial app and is not affiliated with or sponsored by Tesla, Inc.</p>
+  <div class="callout">
+    <strong>Summary</strong><br>
+    · The app talks to your vehicle directly over Bluetooth. Commands, vehicle status and location are not sent to the developer's servers.<br>
+    · No accounts or sign-in. The vehicle authentication key stays in the device's secure key store.<br>
+    · The location permission is only for finding nearby Bluetooth devices (your car). Location is not collected or transmitted.<br>
+    · Ads (AdMob), usage statistics (Google Analytics for Firebase) and our own usage monitoring (Owl Pulse) communicate as described in sections 3 to 5.<br>
+  </div>
+  <h2>1. Information stored on your device</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>Vehicle info</td><td>The vehicle identification number (VIN) and vehicle name you enter; used only to compute the Bluetooth name of the vehicle to connect to</td></tr>
+      <tr><td>Vehicle authentication key</td><td>A device-only private key enrolled with your vehicle. Kept in the Android Keystore and never exported from the app</td></tr>
+      <tr><td>Settings and panel</td><td>Language, theme, panel button layout, automation rules, action history</td></tr>
+      <tr><td>Backup file</td><td>When you run a backup, a JSON file with settings, panel and history is saved to the Downloads folder. It does not include the vehicle authentication key. It may remain after uninstall; delete it with a file manager</td></tr>
+    </tbody>
+  </table>
+  <p>This information is not sent to the developer's servers. System auto-backup is not used.</p>
+  <h2>2. Permissions</h2>
+  <ul>
+    <li><strong>Nearby devices (Bluetooth scan/connect)</strong>: to find and connect to your vehicle and send commands.</li>
+    <li><strong>Location (precise)</strong>: required by Android for nearby Bluetooth scanning; used only to find the vehicle. Location values are not read, stored or sent to any server.</li>
+    <li>Internet, network state and advertising ID permissions are used by the ads and Google analytics SDKs and by usage monitoring.</li>
+    <li>The app does not request camera, microphone, contacts, accounts or full storage access.</li>
+  </ul>
+  <h2>3. Ads — Google AdMob</h2>
+  <ul>
+    <li>The app uses a bottom banner, native ads between list items and within screens, an exit-confirmation ad, interstitial ads after completed tasks and a rewarded ad (to hide the banner). Full-screen ads are limited to times when the vehicle is stopped.</li>
+    <li>The Google SDK may collect and share IP address (including approximate location), device identifiers such as the advertising ID, ad interactions and diagnostics. Vehicle information and VIN are not passed to ads.</li>
+    <li>How Google handles ad data: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+    <li>Where required, ad consent is requested through Google UMP. You can delete or reset the advertising ID or change personalization in device Settings, Google, Ads.</li>
+  </ul>
+  <h2>4. Usage statistics — Google Analytics for Firebase</h2>
+  <ul>
+    <li>We collect usage flow such as screen changes and feature use (button/action names and success or failure). VIN, vehicle authentication key and location are not put into events.</li>
+    <li>Google may process data collected automatically by the SDK such as app instance ID, device and app information, advertising ID and approximate region from IP. We do not guarantee this is fully anonymous.</li>
+    <li>Google privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  </ul>
+  <h2>5. Our own usage monitoring — Owl Pulse</h2>
+  <ul>
+    <li>Sent to: <code>https://api.owlmakers.com/v1/pulse</code></li>
+    <li>Collected: app package name, version and display language; a random session ID created at each app start (not a device identifier); screen changes, button identifier codes and an app-active signal.</li>
+    <li>The server uses only the country/region name derived from the connecting IP for statistics and does not store the IP address or coordinates. VIN, vehicle keys, vehicle state values, names and contacts are not included.</li>
+  </ul>
+  <h2>6. Deletion and retention</h2>
+  <p>Use Settings, Apps, Storage, Clear data, or uninstall the app to remove settings, vehicle info and the authentication key on the device. Remove the enrolled key on the vehicle's own screen. Delete backup files you created with a file manager. Retention and deletion of data processed by Google SDKs follow Google's policies and your ad/analytics settings; we cannot promise to identify and delete an individual user's data there.</p>
+  <h2>7. Children and changes</h2>
+  <p>This app is not directed to children under 14. Changes to this policy are posted on this page.</p>
+  <h2>8. Contact</h2>
+  <ul>
+    <li>Developer: Owlmakers</li>
+    <li>Email: <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></li>
+  </ul>
+  <footer>© 2026 Owlmakers</footer>
+</body>
+</html>
