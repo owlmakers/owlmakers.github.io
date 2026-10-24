@@ -37,7 +37,8 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <ul>
     <li>Your photos, thumbnails, filenames, timestamps, and metadata are <strong>never sent</strong> to the developer's servers or to any third party.</li>
     <li>All photo grouping, similarity detection, and sorting run <strong>100% on your device (on-device)</strong>.</li>
-    <li>Moving photos to the trash or deleting them is performed only when you explicitly confirm via Android's official system confirmation dialog (<code>MediaStore</code>).</li>
+    <li>Moving photos to the trash or deleting them is performed only when you explicitly confirm via Android's official system confirmation dialog (<code>MediaStore</code>). On Android 12+, if you yourself allow this app under system Settings &gt; "Media management apps" (<code>MANAGE_MEDIA</code> permission), that confirmation dialog is skipped and the action you tapped runs right away, with an undo option.</li>
+    <li><strong>Media management permission (<code>MANAGE_MEDIA</code>, Android 12+, optional)</strong> — used only to reduce per-action system confirmation dialogs when moving photos into <code>Pictures/PhotoOrganizer/</code> folders or to the trash. It takes effect only if you allow it in Settings; without it the app still works and asks for confirmation. It is not used to read photos or metadata and send them anywhere; it only changes file locations on your device.</li>
   </ul>
 
   <h2>2. Data stored on your device</h2>
@@ -62,10 +63,10 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     <li>Users in the EEA and the UK are shown a consent (UMP) dialog on first launch.</li>
   </ul>
 
-  <h2>4. Usage analytics &amp; crash reporting (Firebase Analytics / Crashlytics)</h2>
-  <p>This app uses <strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong> to collect anonymous usage statistics and crash diagnostics so the app can be improved.</p>
+  <h2>4. Usage analytics &amp; crash reporting (Firebase Analytics)</h2>
+  <p>This app uses <strong>Google Analytics for Firebase</strong> to collect anonymous usage statistics so the app can be improved.</p>
   <ul>
-    <li><strong>What is collected</strong> — anonymous app usage events, crash stack traces, and a randomly assigned app instance ID per installation.</li>
+    <li><strong>What is collected</strong> — anonymous app usage events and a randomly assigned app instance ID per installation.</li>
     <li><strong>What is not collected</strong> — no personally identifying information (name, email, phone number) and none of your photos or media files.</li>
     <li><strong>Who processes it</strong> — Google performs the collection and processing; the developer only views aggregated statistics in which individuals are not identifiable. Google's privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
   </ul>
