@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — AR Ruler — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+h3{font-size:1rem;margin-top:20px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+  <h1>Privacy Policy — AR Ruler</h1>
+  <p class="meta"><a href="../">한국어</a></p>
+<p class="meta"><strong>Effective date</strong>: October 27, 2026</p>
+<p class="meta"><strong>App name</strong>: AR Ruler ("AR 줄자")</p>
+<p>This policy explains what the app processes and where it sends it.</p>
+<h2>1. Principles (no sign-up; camera video stays on your device; no operator server stores your measurements)</h2>
+<p>The app has no accounts or sign-in, and the operator runs no server or database that receives your measured values or record names. The app requests <strong>one permission only: camera</strong>. It does not request location, contacts, photos, SMS, or microphone permissions.</p>
+<h2>2. What is processed</h2>
+<p><strong>a. Camera video.</strong> The app shows the camera view to measure length, and the video is <strong>processed only on your device</strong>. The app does <strong>not</strong> store camera video or photos and does <strong>not</strong> send them to the operator's server or to any third party. Saved records contain no video.</p>
+<p><strong>b. Google Play Services for AR (ARCore).</strong> The app uses Google's <strong>Google Play Services for AR (ARCore)</strong> to find surfaces and place points in the camera view. <strong>This application runs on Google Play Services for AR (ARCore), which is provided by Google and governed by the Google Privacy Policy.</strong> Use of ARCore functionality in the app is subject to the then-current Google Terms of Service (<a href="https://policies.google.com/terms">https://policies.google.com/terms</a>) and Google Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>). How ARCore handles data: <a href="https://support.google.com/ar?p=how-google-play-services-for-ar-handles-your-data.">https://support.google.com/ar?p=how-google-play-services-for-ar-handles-your-data.</a> Google may process device identifiers and diagnostics for ARCore usage analytics; the app operator does not receive this. The app does not use ARCore Cloud Anchors or the Geospatial API. On devices that do not support ARCore the app still installs; the measure screen shows a notice and only History and Guide work.</p>
+<p><strong>c. Stored on your device (never sent to the operator's server)</strong> — record names you chose, measured values (millimetre totals and segments), the "unstable" flag, save time; settings (theme, language, length unit). Stored in on-device storage and removed when you uninstall the app or clear its data. <strong>Backup file:</strong> when records or settings change, the app automatically writes a backup file (JSON containing the records and settings above) to your device's <strong>shared Downloads folder</strong>, and "Back up to file" in Settings writes additional files. These files stay on the device and are not sent anywhere by the app, but because they sit in a shared folder they may remain after uninstall unless you delete them, and other apps or file managers with file access on your device can see them.</p>
+<p><strong>d. Sharing (only when you tap).</strong> Tapping "Share" on a record passes a <strong>text of its name, value and segments</strong> to the Android share sheet, and only to the app you pick. Nothing is shared unless you tap. A <strong>rewarded ad</strong> may play before the share sheet opens (if the ad finishes, the sheet opens; if no ad loads, it opens right away); ad processing is described in e below.</p>
+<p><strong>e. Monitoring and advertising data sent automatically</strong></p>
+<ul>
+<li><strong>Owl Pulse (our own usage monitoring)</strong> → <code><a href="https://api.owlmakers.com/v1/pulse">https://api.owlmakers.com/v1/pulse</a></code>. Sent: app package name, version, language; a random session ID created at each launch; a <strong>random install ID created once at installation</strong> (not an account or hardware ID — a new value after uninstall); code-style IDs of screens and button taps (e.g. <code>measure.add_point</code>); action outcomes (success / failure / cancel with a category code); ad shown / click / failure signals; the record number (a sequence number, not the name or value) when a record is deleted; an "app is open" signal. <strong>Not sent: measured values, record names, camera video, or point coordinates.</strong> Debug builds do not send; only released builds do. The server derives only the country/region/city name from the connection for statistics and does not store the IP address or coordinates.</li>
+<li><strong>Google AdMob (ads)</strong>: advertising ID, IP address, device information, and ad interactions may be processed to show banner ads, native ads (list, record detail, guide), the exit-screen ad, an interstitial ad after you save a measurement, and the rewarded ad before sharing. No ads appear while you are measuring (camera screen). Where consent is required (EEA, UK, etc.) the Google UMP consent form appears first.</li>
+<li><strong>Google Analytics for Firebase (GA4)</strong>: anonymous usage statistics (screen views, button-tap codes, outcomes), device model and OS version. The Firebase SDK may create a per-installation random identifier (Firebase installation ID). Measured values and record names are not sent.</li>
+</ul>
+<h2>3. Retention</h2>
+<p>Data on your device is deleted when you uninstall the app or clear its data; backup files in Downloads must be deleted by you. Monitoring, analytics, advertising and ARCore data are kept under each system's retention policy and then used only as aggregated statistics.</p>
+<h2>4. Sharing</h2>
+<p>The app does not provide your measured values, record names, or camera video to anyone. Third parties involved: Google LLC (Google Play Services for AR / ARCore, AdMob, Firebase — <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>) and OwlMakers (own Pulse monitoring).</p>
+<h2>5. Your choices</h2>
+<p>Delete records one by one (undo is available for 5 seconds), use "Delete all records" in Settings, clear app data, or uninstall to remove on-device data; delete backup files in Downloads with a file manager. Revoke camera permission in system settings to stop measuring (History and Guide keep working). Where consent is required, change your ad consent under Settings → Ad privacy settings; elsewhere use Google ad settings on your device.</p>
+<h2>6. Children</h2>
+<p>The app is not directed to children. We do not knowingly collect personal information from children under 13.</p>
+<h2>7. Changes</h2>
+<p>If this policy changes, the effective date above is updated; material changes are announced in the app or the store listing.</p>
+<h2>8. Contact</h2>
+<p>Owlmakers — support@owlmakers.com</p>
+  <footer>© 2026 Owlmakers</footer>
+</body>
+</html>
