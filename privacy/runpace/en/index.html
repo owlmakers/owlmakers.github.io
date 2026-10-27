@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Running Pace — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+h3{font-size:1rem;margin-top:20px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+.callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+<h1>Privacy Policy — Running Pace</h1>
+<p class="meta"><a href="../">한국어</a></p>
+<p><strong>Effective date</strong>: October 27, 2026<br />
+<strong>App name</strong>: Running Pace ("러닝 페이스")</p>
+<p>This policy explains what the app processes and where it sends it.</p>
+<h2>1. Principles (no sign-up; no location; what you enter stays on your device)</h2>
+<p>The app has no accounts or sign-in, and the operator runs no server or database that receives the times, distances, or goal names you enter. The app <strong>does not request location, camera, microphone, contacts, photos, or SMS permissions</strong>, and it does not record distance or routes.</p>
+<h2>2. What is processed</h2>
+<p><strong>a. Stored on your device (never sent to the operator's server)</strong> — last input (distance, finish time or pace, input mode); saved goals (the name you chose, distance, finish time, split style and gap, beat in steps per minute, created time); last beat (steps per minute, sound); settings (unit, beat sound, theme, language, ad-hide expiry time). Stored in on-device storage and removed when you uninstall the app or clear its data. <strong>Backup file:</strong> when goals or settings change, the app automatically writes a backup file (JSON containing every value the app stores — the above plus items such as the onboarding-seen flag; the install ID and ad/measurement state are not included) to your device's <strong>shared Downloads folder</strong>; you can also create one in Settings. The file stays on the device and the app does not send it anywhere. Because it is in a shared folder it may remain after uninstall unless you delete it, and apps or file managers with file access can see it. When you restore, the app reads only the one file you pick.</p>
+<p><strong>b. Beat playback and notifications.</strong> While the beat plays, the app runs a playback (foreground) service, and on Android 13 and later it may ask for <strong>notification permission</strong> to show a playback notification with a stop button. The beat plays even if you decline. Notification content is created on the device and is not sent to a server. The beat is a sound generated on the device; the app does not listen to or record audio.</p>
+<p><strong>c. Sharing (only when you tap).</strong> Tapping Share passes a <strong>text of the distance, time and pace</strong> to the Android share sheet, only to the app you pick.</p>
+<p><strong>d. Monitoring and advertising data sent automatically</strong>
+1. <strong>Owl Pulse (our own usage monitoring)</strong> → <code>https://api.owlmakers.com/v1/pulse</code>. Sent: app package name, version, language; a random session ID created at each launch; a <strong>random install ID created once at installation</strong> (not an account or hardware ID — a new value after uninstall); code-style IDs of screens and button taps (e.g. <code>home.save</code>, <code>cadence.start</code>); action outcomes (success / failure / cancel with a category code, and a coarse category of how long a beat played); ad shown / click / failure signals; a signal that the app is open. <strong>Not sent: the times, distances, paces, beat values, or goal names you enter.</strong> The app holds no location. The server derives only the <strong>names</strong> of country, region and city from the connecting IP for statistics and does not store the IP address or coordinates. Debug builds send nothing.
+2. <strong>Google AdMob (ads)</strong>: advertising ID, IP address, device information, and ad interactions may be processed to show a top banner, native ads under results and between list items, an ad on the exit confirmation screen, a full-screen ad right after you save a goal, and a rewarded ad that hides the banner. The Cadence screen body has no ads while the beat plays. Where consent is required (EEA, UK, etc.) the Google UMP consent form appears first.
+3. <strong>Google Analytics for Firebase (GA4)</strong>: anonymous usage statistics (screen views, button-tap codes, outcomes), device model and OS version. The Firebase SDK (Analytics, Messaging) may create a per-installation random identifier (Firebase installation ID); the app sends no push notifications. Entered values and goal names are not sent.
+4. <strong>App update check</strong>: the app can use Google Play's update feature to check for a new version; Google Play services handle this.</p>
+<h2>3. Retention</h2>
+<p>Data on your device is deleted when you uninstall the app or clear its data; backup files in Downloads must be deleted by you. Monitoring, analytics, and advertising data are kept under each system's retention policy and then used only as aggregated statistics.</p>
+<h2>4. Sharing</h2>
+<p>The app does not provide the values or goal names you enter to anyone. Third parties involved: Google LLC (AdMob, Firebase — https://policies.google.com/privacy) and OwlMakers (own Pulse monitoring).</p>
+<h2>5. Your choices</h2>
+<p>Delete saved goals one by one (undo is available for 5 seconds), clear app data, or uninstall to remove on-device data; delete backup files in Downloads with a file manager. Turn off notifications in system settings. Where consent is required, change your ad consent under Settings → Ad privacy settings; elsewhere use Google ad settings on your device.</p>
+<h2>6. Children</h2>
+<p>The app is not directed to children. We do not knowingly collect personal information from children under 13.</p>
+<h2>7. Changes</h2>
+<p>If this policy changes, the effective date above is updated; material changes are announced in the app or the store listing.</p>
+<h2>8. Contact</h2>
+<p>Owlmakers — support@owlmakers.com</p>
+<footer>Owlmakers · support@owlmakers.com</footer>
+</body>
+</html>
