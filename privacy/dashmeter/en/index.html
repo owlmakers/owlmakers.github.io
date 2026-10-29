@@ -34,7 +34,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
     · There is no account or sign-in, so the developer holds no personal data about you. The only thing sent
     to a developer server is the <strong>anonymous usage statistics</strong> in section 1b, which never
     includes coordinates either.<br>
-    · Ads (Google AdMob) use an advertising ID. There is no payment, subscription or account.
+    · Ads (Google AdMob, Unity LevelPlay) may use an advertising ID and installed-app information. There is no payment, subscription or account.
   </div>
 
   <h2>1. Location — it never leaves your device</h2>
@@ -72,8 +72,8 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   </ul>
 
   <h2>3. Advertising — Google AdMob</h2>
-  <p>The app shows Google AdMob ads to remain free (on the Measure and Settings screens only; the drive
-  screen and HUD carry no ads).</p>
+  <p>To remain free, the app shows ads — a banner strip at the top of the screen and between content on reading screens, and a full-screen ad right after you finish an action once the vehicle is confirmed stopped.
+  The banner strip pinned at the top is always shown, but in-content strips and full-screen ads are requested and shown only when the vehicle is confirmed stopped — never requested while driving or measuring. The speed display (HUD) has no ads.</p>
   <ul>
     <li>AdMob may collect an <strong>advertising ID (AAID) and device information</strong> to serve ads.
       This is governed by Google's policies; the developer does not separately collect or retain it.</li>
@@ -82,6 +82,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
       <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></li>
     <li>Ad personalisation can be changed in device Settings → Google → Ads.</li>
     <li>Users in the EEA and the UK are shown a consent (UMP) dialog on first launch.</li>
+    <li><strong>Unity LevelPlay / Unity Ads (Unity Technologies)</strong>: to serve ads the app also uses the ad mediation (LevelPlay) and ad network (Unity Ads) SDKs. They may collect the <strong>advertising identifier and information about apps installed on the device</strong> to deliver ads and prevent invalid impressions, and share it with the ad provider. The app itself does not read your installed-app list. (<a href="https://unity.com/legal/privacy-policy">Unity privacy policy</a>)</li>
   </ul>
 
   <h2>4. Children under 14</h2>
