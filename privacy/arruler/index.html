@@ -51,7 +51,7 @@ ARCore를 지원하지 않는 기기에서도 앱은 설치되며, 이 경우 �
 <li><strong>보내지 않는 것</strong>: <strong>잰 길이 값, 기록 이름, 카메라 영상, 점의 위치(좌표)는 보내지 않습니다.</strong></li>
 <li>디버그(개발용) 빌드는 보내지 않으며, 보내는 것은 출시된 앱뿐입니다.</li>
 <li><strong>대략적인 위치</strong>: 서버가 접속 IP에서 국가·시·도·도시 <strong>이름만</strong> 뽑아 통계에 쓰며, IP 주소 자체와 위경도는 저장하지 않습니다.</li>
-<li><strong>광고 (Unity LevelPlay 중개, Google 동의 확인)</strong>: 앱 안 광고는 <strong>띠 광고(상단 고정 띠, 기록 목록·기록 상세·가이드 화면 안의 띠, 종료 확인 화면의 띠)</strong> 와 <strong>측정을 저장한 직후의 전면 광고</strong> 두 종류뿐이며, 보상형(리워드) 광고는 없습니다. 광고는 광고 중개 서비스 <strong>Unity LevelPlay</strong>(Unity Ads 연결 포함)를 통해 불러오며, 광고를 보여 주고 성과를 재기 위해 광고 식별자, IP 주소, 기기 정보, 광고 상호작용 정보가 처리될 수 있습니다. 측정하는 동안(카메라 화면)에는 광고가 나오지 않습니다. 동의가 필요한 지역(EEA·영국 등)에서는 Google UMP 동의 창이 먼저 뜨고 그 뒤에 광고가 시작됩니다.</li>
+<li><strong>광고 (Unity LevelPlay 중개, Google 동의 확인)</strong>: 앱 안 광고는 <strong>띠 광고(상단 고정 띠, 기록 목록·기록 상세·가이드 화면 안의 띠, 종료 확인 화면의 띠)</strong> 와 <strong>측정을 저장한 직후의 전면 광고</strong> 두 종류뿐이며, 보상형(리워드) 광고는 없습니다. 광고는 광고 중개 서비스 <strong>Unity LevelPlay</strong>(Unity Ads 연결 포함)를 통해 불러오며, 광고를 보여 주고 성과를 재기 위해 광고 식별자, IP 주소, 기기 정보, 기기에 설치된 앱 정보, 광고 상호작용 정보가 광고 중개·네트워크 사업자(LevelPlay SDK)에 의해 수집·처리될 수 있습니다. 앱 자체는 설치된 앱 목록을 읽지 않습니다. 측정하는 동안(카메라 화면)에는 광고가 나오지 않습니다. 동의가 필요한 지역(EEA·영국 등)에서는 Google UMP 동의 창이 먼저 뜨고 그 뒤에 광고가 시작됩니다.</li>
 <li><strong>Google Analytics for Firebase (GA4)</strong>: 익명화된 앱 이용 통계(화면 조회, 버튼 누름 코드, 작업 결과)와 기기 모델·OS 버전이 집계됩니다. Firebase SDK는 설치별 임의 식별자(Firebase 설치 ID)를 만들 수 있습니다. 잰 값과 기록 이름은 전송되지 않습니다.</li>
 </ol>
 <h2>3. 보유 및 이용 기간</h2>
@@ -78,7 +78,7 @@ ARCore를 지원하지 않는 기기에서도 앱은 설치되며, 이 경우 �
 <tr>
 <td style="text-align: left;"><strong>Unity LevelPlay (Unity Technologies, 광고 중개)</strong></td>
 <td style="text-align: left;">광고 게재·성과 측정</td>
-<td style="text-align: left;">광고 식별자, 기기 정보, IP 주소, 광고 상호작용 정보</td>
+<td style="text-align: left;">광고 식별자, 기기 정보, IP 주소, 기기에 설치된 앱 정보, 광고 상호작용 정보</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Google LLC (Firebase, 광고 동의 UMP)</strong></td>
