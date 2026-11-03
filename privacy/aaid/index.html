@@ -90,6 +90,9 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
   <p>화면 테마·언어 같은 앱 설정만 기기 내부에 저장됩니다. <strong>광고 ID 는 저장하지 않습니다.</strong>
   앱을 삭제하면 저장된 설정도 함께 삭제됩니다.</p>
 
+  <h2>푸시 알림 수신 (Firebase Cloud Messaging)</h2>
+  <p>이 앱은 개발자가 보내는 공지·안내 알림을 받기 위해 Google 의 Firebase Cloud Messaging(FCM)을 사용합니다. 앱을 열면 Google 이 이 설치본에 FCM 설치 ID(등록 토큰)를 부여하며, 앱은 이 값을 개발자 서버로 보내거나 저장하지 않습니다. 앱은 앱 이름과 표시 언어에 해당하는 알림 구독 주제(topic)에 가입하고, 그 가입 정보는 Google 이 처리합니다. 알림은 같은 앱·같은 언어를 쓰는 모든 이용자에게 같은 내용으로 가며 개인 정보는 담기지 않습니다. 안드로이드 13 이상의 알림 권한은 이용자가 앱 안의 안내 줄이나 설정 행을 눌렀을 때에만 요청하며, 허용하지 않아도 알림 외의 모든 기능을 쓸 수 있습니다. 기기의 [설정] → [앱] → 알림에서 언제든 끌 수 있고, 앱을 삭제하면 더 이상 받지 않습니다.</p>
+
   <h2>6. 아동의 개인정보</h2>
   <p>본 앱은 만 13세 미만 아동을 주된 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.</p>
 
@@ -171,6 +174,9 @@ hr{border:0;border-top:1px solid #eee;margin:44px 0}
   <h2>5. What is stored on your device</h2>
   <p>Only app preferences such as theme and language. <strong>The advertising ID is not stored.</strong>
   Uninstalling the app removes those preferences.</p>
+
+  <h2>Push notifications (Firebase Cloud Messaging)</h2>
+  <p>This app uses Google's Firebase Cloud Messaging (FCM) to receive announcements and notices sent by the developer. When you open the app, Google assigns an FCM installation ID (registration token) to this installation; the app does not send or store this value on the developer's servers. The app subscribes to notification topics for the app name and your display language, and Google processes that subscription. A notification goes with the same content to every user of the same app and language and carries no personal data. On Android 13+ the notification permission is requested only when you tap the in-app notice line or the settings row, and you can use every other feature without allowing it. You can turn notifications off at any time in the device's Settings → Apps → Notifications, and you stop receiving them when you uninstall the app.</p>
 
   <h2>6. Children</h2>
   <p>The app is not directed at children under 13 and does not knowingly collect their personal information.</p>
