@@ -22,7 +22,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <h1>Privacy Policy — Compass</h1>
   <p class="meta"><a href="../">한국어</a></p>
 
-<p><strong>Last updated: October 24, 2026</strong></p>
+<p><strong>Last updated: November 10, 2026</strong></p>
 <p>Owlmakers ("the developer") takes the privacy of users of Compass ("the app") seriously.
 This policy explains how information is handled.</p>
 <h2>1. Sensors and location — the app never asks for or sends your location</h2>
@@ -63,37 +63,43 @@ This policy explains how information is handled.</p>
 </table>
 <p><strong>Backup files</strong> — Whenever your saved directions or settings change, the app writes a backup file (<code>*_backup.json</code>) to the shared <strong>Downloads folder</strong> of your device. You can also create one yourself with "Back up to file". The file stays on your device and is not sent to the developer. It leaves your device only if you move or share it yourself. Uninstalling the app does not delete this file, so delete it yourself if you do not need it.</p>
 <p>Uninstalling the app deletes the information stored inside the app.</p>
-<h2>3. Ads — Google AdMob</h2>
-<p>The app shows Google AdMob ads (banner, native, and interstitial) to stay free.</p>
+<h2>3. Ads — Unity LevelPlay and Google AdMob</h2>
+<p>The app shows ads (a banner strip at the top, strip ads in the middle of screens, and interstitial ads) to stay free. Ads are loaded through the ad mediation service Unity LevelPlay (ironSource, Unity Technologies), and ad networks connected to it (currently Unity Ads and others) fill them. The app also includes the Google AdMob ad SDK.</p>
 <ul>
-<li>AdMob may collect your <strong>advertising ID (AAID) and device information</strong> to serve ads.</li>
-<li>This follows Google's policies. The developer does not separately collect or keep this information.</li>
-<li><strong>The developer never provides your headings, sensor readings, or saved directions for advertising purposes.</strong></li>
-<li>Google's advertising data practices: https://policies.google.com/technologies/ads</li>
-<li>You can change ad personalization in device Settings → Google → Ads, and reopen your consent choice from "Ad privacy settings" in the app settings.</li>
-<li>Users in the European Economic Area and the UK see a consent (UMP) dialog on first launch. The ad SDK starts only after that step is complete.</li>
+  <li>These ad SDKs may collect your <strong>advertising ID (AAID), IP address, device information, ad interactions and information about the apps installed on your device</strong> to serve ads and prevent invalid impressions, and the advertising ID and installed-app information may be passed to ad mediation and ad network providers (Unity Technologies, Google and others). The app itself does not read the list of apps installed on your device.</li>
+  <li>This follows each provider's own policies. The developer does not separately collect or keep this information.</li>
+  <li><strong>The developer never provides your headings, sensor readings, or saved directions for advertising purposes.</strong></li>
+  <li>Google's advertising data practices: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+  <li>Unity privacy policy: <a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></li>
+  <li>Ad personalization: reset or delete your advertising ID, or turn off personalized ads, in device Settings → Google → Ads, and reopen your consent choice from "Ad privacy settings" in the app settings.</li>
+  <li>Users in the European Economic Area and the UK see a consent (UMP) dialog on first launch. The ad SDKs start only after that step is complete, and the consent result is also passed to the ad mediation service.</li>
 </ul>
 <h2>4. Usage analytics (Google Analytics for Firebase and our own usage counter)</h2>
 <p>To improve the app and keep it stable, the app collects anonymous usage statistics with <strong>Google Analytics for Firebase</strong> and the developer's usage counter server.</p>
 <ul>
-<li><strong>What is collected</strong> — anonymous usage records such as which screen was opened, which button was tapped, and whether an action such as save, delete, or backup succeeded; the app version; the display language; a randomly assigned <strong>app instance ID and session ID</strong>; and the ad format and placement name when an ad is shown.
+<li><strong>What is collected</strong> — anonymous usage records such as which screen was opened, which button was tapped, and whether an action such as save, delete, or backup succeeded; the app version; the display language; an <strong>app instance ID</strong> assigned per installation and a randomly assigned <strong>session ID</strong> per launch; and the ad format and placement name when an ad is shown.
   The usage counter server receives your connection address (IP address) as part of the network request. The developer uses it only for <strong>country- and region-level approximate counts</strong>.</li>
+<li><strong>Installation identifier</strong> — a random value generated once on first launch after installation and stored on the device. It is used only to count the same installation across days and is not linked to your name, account or any hardware identifier. It is removed when you uninstall the app or clear its data; where device auto-backup is enabled it may be restored when you reinstall.</li>
 <li><strong>What is not collected</strong> — personally identifying information such as name, email, or phone number; precise location; <strong>sensor values such as heading or magnetic field strength; and the names you give to saved directions</strong>.</li>
 <li><strong>Who processes it</strong> — Google performs the collection and processing for Google Analytics. The developer views only <strong>aggregated statistics</strong> in which individuals are not identifiable. Google's privacy policy: https://policies.google.com/privacy</li>
 </ul>
-<h2>Push notifications (Firebase Cloud Messaging)</h2>
-<p>This app uses Google's Firebase Cloud Messaging (FCM) to receive announcements and notices sent by the developer. When you open the app, Google assigns an FCM installation ID (registration token) to this installation; the app does not send or store this value on the developer's servers. The app subscribes to notification topics for the app name and your display language, and Google processes that subscription. A notification goes with the same content to every user of the same app and language and carries no personal data. On Android 13+ the notification permission is requested only when you tap the in-app notice line or the settings row, and you can use every other feature without allowing it. You can turn notifications off at any time in the device's Settings → Apps → Notifications, and you stop receiving them when you uninstall the app.</p>
-
-<h2>5. Children under 14</h2>
+<h2>5. Notifications and push (Firebase Cloud Messaging)</h2>
+<p>The app can show two kinds of notifications.</p>
+<ul>
+  <li><strong>Come-back reminders</strong> — 3 and 7 days after you last opened the app, it shows a reminder such as "Try opening the app." Scheduling and showing them happen entirely on your device (the RECEIVE_BOOT_COMPLETED permission is used to restore the schedule after the device restarts), and nothing is sent to the developer's server.</li>
+  <li><strong>News notifications (push)</strong> — to receive app news sent by the developer, the app uses Google's Firebase Cloud Messaging (FCM). When the app starts, FCM creates an identifier for this installation (an FCM registration token and a Firebase installation ID), and the app asks Google FCM to subscribe it to two topics: the app name and your display language. Google processes the identifier and topics; the app does not send or store the token on the developer's server. User state such as location or saved information is never used as a topic.</li>
+</ul>
+<p><strong>Notification permission (Android 13 and above)</strong> — the system permission dialog is shown when you tap the in-app notice bar or the notification item in Settings, and once from the second launch after you have used the app. You can use every feature without allowing it (if you do not, the FCM identifier and subscriptions may still be created but no notification is shown). You can turn notifications off at any time in device Settings → Apps → Notifications.</p>
+<h2>6. Children under 14</h2>
 <p>The app is not directed at children under 14 and does not knowingly collect their personal data.</p>
-<h2>6. Your rights</h2>
+<h2>7. Your rights</h2>
 <p>The app has no accounts and no sign-in, so the developer holds no personal data such as your name or contact details. You can clear on-device data at any time by clearing app storage or uninstalling the app, and you can delete the backup file in your Downloads folder yourself.</p>
-<h2>7. Contact</h2>
+<h2>8. Contact</h2>
 <ul>
 <li>Email: support@owlmakers.com</li>
 <li>Developer: Owlmakers</li>
 </ul>
-<h2>8. Changes</h2>
+<h2>9. Changes</h2>
 <p>Any change to this policy will be published on this page.</p>
 
   <footer>© 2026 Owlmakers · <a href="../../">All app privacy policies</a></footer>

@@ -20,14 +20,14 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </head>
 <body>
   <h1>Privacy Policy — PDF Converter</h1>
-  <p class="meta">Effective: October 24, 2026 · <a href="../">한국어</a></p>
+  <p class="meta">Effective: November 10, 2026 · <a href="../">한국어</a></p>
   <p>Owlmakers ("the Developer") takes the privacy of people who use PDF Converter ("the App", store title: PDF to Image Converter - Auto Crop Margins) seriously. This policy explains how the App handles information.</p>
   <div class="callout">
     <strong>Summary</strong><br>
     · The <strong>PDFs and photos you choose are processed only on your device</strong>. File contents, file names and photos are never sent to the Developer's servers or to third parties.<br>
     · The App has <strong>no accounts, sign-in or registration</strong>.<br>
     · The App does not request full storage access, camera, location, microphone or contacts permissions. It reads only the files you pick yourself in the system file picker or photo picker.<br>
-    · The App does use ads (Google AdMob), anonymous usage statistics (Google Analytics for Firebase) and the Developer's anonymous usage counts (Owlmakers server). File contents, file names, page contents and exact page counts are not part of any of these.
+    · The App does use ads (Unity LevelPlay and Google AdMob), notifications (come-back reminders and news push), anonymous usage statistics (Google Analytics for Firebase) and the Developer's anonymous usage counts (Owlmakers server). File contents, file names, page contents and exact page counts are not part of any of these.
   </div>
   <h2>1. PDFs and photos — they never leave your device</h2>
   <ul>
@@ -48,13 +48,15 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
       <tr><td>Backup file</td><td>A <code>pdfconverter_backup*.json</code> file containing the settings and job history above. It is written to your <strong>Downloads folder</strong> whenever the data changes, and "Back up to file now" in Settings creates a dated copy. It may contain original file names and file addresses but <strong>not the PDFs or photos themselves</strong>; it stays on your device and is not sent to the Developer.</td></tr>
     </tbody>
   </table>
-  <h2>3. Ads — Google AdMob</h2>
-  <p>The App is free and shows Google AdMob ads (a banner at the top of the screen, native ads in the exit dialog and on the home, progress, result and history screens, and interstitial ads after a conversion finishes and after you return from the share sheet). No interrupting ads are shown while you set options, adjust crops or while a conversion is running.</p>
+  <h2>3. Ads — Unity LevelPlay and Google AdMob</h2>
+  <p>The App is free and shows ads (a banner at the top of the screen, banner-style ads in the exit dialog and on the home, jobs, history, progress and result screens, and interstitial ads after a conversion finishes, after you return from the share sheet, and similar moments). Ads are loaded through the ad mediation service Unity LevelPlay (ironSource, Unity Technologies), and ad networks connected to it (currently Unity Ads and others) fill them. The App also includes the Google AdMob ad SDK. No interrupting ads are shown while you set options, adjust crops or while a conversion is running.</p>
   <ul>
-    <li>AdMob may collect your <strong>advertising ID, IP address, app interactions and diagnostics</strong> to serve ads. This is handled under Google's policies; the Developer does not separately collect or keep this information. PDFs, photos and file names are never passed to ads.</li>
-    <li>How Google handles ad data: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
-    <li>Ad personalization: change it or reset/delete your advertising ID in your device's Settings → Google → Ads.</li>
-    <li>Users in the European Economic Area and the UK see an ad consent (UMP) form on first launch, and the ads SDK does not start until that process is finished. You can change your choice later under "Ad privacy settings" in Settings (shown only in those regions).</li>
+    <li>These ad SDKs may collect your <strong>advertising ID (AAID), IP address, device information, ad interactions and information about the apps installed on your device</strong> to serve ads and prevent invalid impressions, and the advertising ID and installed-app information may be passed to ad mediation and ad network providers (Unity Technologies, Google and others). The app itself does not read the list of apps installed on your device.</li>
+    <li>This follows each provider's own policies. The developer does not separately collect or keep this information. PDFs, photos and file names are never passed to ads.</li>
+    <li>Google's advertising data practices: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+    <li>Unity privacy policy: <a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></li>
+    <li>Ad personalization: reset or delete your advertising ID, or turn off personalized ads, in device Settings → Google → Ads, and reopen your consent choice from "Ad privacy settings" in the app settings.</li>
+    <li>Users in the European Economic Area and the UK see a consent (UMP) dialog on first launch. The ad SDKs start only after that step is complete, and the consent result is also passed to the ad mediation service.</li>
   </ul>
   <h2>4. Usage statistics and usage counts</h2>
   <h3>4-1. Google Analytics for Firebase</h3>
@@ -66,18 +68,24 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   </ul>
   <h3>4-2. Owlmakers usage counts</h3>
   <p>To check that the App is working normally, it sends <strong>anonymous usage counts to the Developer's server</strong> (<code>api.owlmakers.com</code>, HTTPS). This is turned on only in the released (production) version.</p>
+  <p>Installation identifier — A random value generated once on first launch after installation and stored on the device. It is used only to count the same installation across days and is not linked to your name, account or any hardware identifier. It is removed when you uninstall the app or clear its data; where device auto-backup is enabled it may be restored when you reinstall.</p>
   <ul>
     <li>What is sent: app name, version and display language; the same kinds of screen navigation, button use and job-outcome codes as in 4-1; a signal that the App is in use; and a <strong>random value generated on each launch</strong> (it is not stored, so it does not identify you or your device).</li>
     <li>The server records only the <strong>country, region and city names</strong> derived from the connection route. It <strong>does not store your IP address</strong>, and the App neither sends nor receives location coordinates.</li>
     <li>Data is kept for one year and then deleted. It is not provided to third parties.</li>
   </ul>
-  <h2>5. Push notification component (Firebase Cloud Messaging)</h2>
-  <p>This app uses Google's Firebase Cloud Messaging (FCM) to receive announcements and notices sent by the developer. When you open the app, Google assigns an FCM installation ID (registration token) to this installation; the app does not send or store this value on the developer's servers. The app subscribes to notification topics for the app name and your display language, and Google processes that subscription. A notification goes with the same content to every user of the same app and language and carries no personal data. On Android 13+ the notification permission is requested only when you tap the in-app notice line or the settings row, and you can use every other feature without allowing it. You can turn notifications off at any time in the device's Settings → Apps → Notifications, and you stop receiving them when you uninstall the app.</p>
+  <h2>5. Notifications and push (Firebase Cloud Messaging)</h2>
+  <p>The app can show two kinds of notifications.</p>
+  <ul>
+    <li><strong>Come-back reminders</strong> — 3 and 7 days after you last opened the app, it shows a reminder such as "Try opening the app." Scheduling and showing them happen entirely on your device (the RECEIVE_BOOT_COMPLETED permission is used to restore the schedule after the device restarts), and nothing is sent to the developer's server.</li>
+    <li><strong>News notifications (push)</strong> — to receive app news sent by the developer, the app uses Google's Firebase Cloud Messaging (FCM). When the app starts, FCM creates an identifier for this installation (an FCM registration token and a Firebase installation ID), and the app asks Google FCM to subscribe it to two topics: the app name and your display language. Google processes the identifier and topics; the app does not send or store the token on the developer's server. User state such as location or saved information is never used as a topic.</li>
+  </ul>
+  <p><strong>Notification permission (Android 13 and above)</strong> — the system permission dialog is shown when you tap the in-app notice bar or the notification item in Settings, and once from the second launch after you have used the app. You can use every feature without allowing it (if you do not, the FCM identifier and subscriptions may still be created but no notification is shown). You can turn notifications off at any time in device Settings → Apps → Notifications.</p>
   <h2>6. Developer servers</h2>
   <p>The App has no accounts and does not send PDFs, photos or file names to the Developer's servers. The only thing that goes to the Developer's server is the anonymous usage counts in section 4-2.</p>
   <h2>7. Permissions the App requests</h2>
   <p>The App does <strong>not</strong> request permissions for full storage reading, photos and videos, camera, location, microphone, contacts or accounts. PDFs are read from the system file picker and photos from the system photo picker (Android 13+) or file picker (Android 12 and below), and only what you choose. On Android 9 and below only, it uses the storage write permission to save results to the photo gallery.</p>
-  <p>Internet access, network state, advertising ID access, keeping the device awake (WAKE_LOCK), background services (FOREGROUND_SERVICE) and showing notifications (POST_NOTIFICATIONS) are permissions declared by the ads and Firebase components. They do not let the App read your PDFs or photos, and the App neither asks for notification permission at run time nor sends notifications.</p>
+  <p>Internet access, network state, advertising ID access, keeping the device awake (WAKE_LOCK), and background services (FOREGROUND_SERVICE) are permissions declared by the ads and Firebase components. Showing notifications (POST_NOTIFICATIONS) and restoring the reminder schedule after the device restarts (RECEIVE_BOOT_COMPLETED) are for the notifications in section 5, and the notification permission dialog is shown only at the times described there. None of these permissions lets the App read your PDFs or photos.</p>
   <h2>8. App updates</h2>
   <p>Update prompts use Google Play's in-app update feature. The Developer receives no information about you in this process.</p>
   <h2>9. Children</h2>
