@@ -9,6 +9,7 @@ body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
 max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
 h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
 h2{font-size:1.1rem;margin-top:28px}
+h3{font-size:1rem;margin-top:20px}
 a{color:#2563eb;word-break:break-all}
 .meta{color:#666;font-size:.9rem}
 .callout{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 16px;margin:16px 0}
@@ -19,65 +20,79 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 </style>
 </head>
 <body>
-  <h1>Privacy Policy — Tesla Pad</h1>
-  <p class="meta">Last updated: October 24, 2026 · <a href="../">한국어</a></p>
-  <p>Owlmakers explains how "Tesla Pad" (com.owlmakers.teslapad) handles information. This is an unofficial app and is not affiliated with or sponsored by Tesla, Inc.</p>
-  <div class="callout">
-    <strong>Summary</strong><br>
-    · The app talks to your vehicle directly over Bluetooth. Commands, vehicle status and location are not sent to the developer's servers.<br>
-    · No accounts or sign-in. The vehicle authentication key stays in the device's secure key store.<br>
-    · The location permission is only for finding nearby Bluetooth devices (your car). Location is not collected or transmitted.<br>
-    · Ads (AdMob), usage statistics (Google Analytics for Firebase) and our own usage monitoring (Owl Pulse) communicate as described in sections 3 to 5.<br>
-  </div>
-  <h2>1. Information stored on your device</h2>
-  <table>
-    <thead><tr><th>Item</th><th>Details</th></tr></thead>
-    <tbody>
-      <tr><td>Vehicle info</td><td>The vehicle identification number (VIN) and vehicle name you enter; used only to compute the Bluetooth name of the vehicle to connect to</td></tr>
-      <tr><td>Vehicle authentication key</td><td>A device-only private key enrolled with your vehicle. Kept in the Android Keystore and never exported from the app</td></tr>
-      <tr><td>Settings and panel</td><td>Language, theme, panel button layout, automation rules, action history</td></tr>
-      <tr><td>Backup file</td><td>When you run a backup, a JSON file with settings, panel and history is saved to the Downloads folder. It does not include the vehicle authentication key. It may remain after uninstall; delete it with a file manager</td></tr>
-    </tbody>
-  </table>
-  <p>This information is not sent to the developer's servers. System auto-backup is not used.</p>
-  <h2>2. Permissions</h2>
-  <ul>
-    <li><strong>Nearby devices (Bluetooth scan/connect)</strong>: to find and connect to your vehicle and send commands.</li>
-    <li><strong>Location (precise)</strong>: required by Android for nearby Bluetooth scanning; used only to find the vehicle. Location values are not read, stored or sent to any server.</li>
-    <li>Internet, network state and advertising ID permissions are used by the ads and Google analytics SDKs and by usage monitoring.</li>
-    <li>The app does not request camera, microphone, contacts, accounts or full storage access.</li>
-  </ul>
-  <h2>3. Ads — Google AdMob</h2>
-  <ul>
-    <li>The app uses a bottom banner, native ads between list items and within screens, an exit-confirmation ad, interstitial ads after completed tasks and a rewarded ad (to hide the banner). Full-screen ads are limited to times when the vehicle is stopped.</li>
-    <li>The Google SDK may collect and share IP address (including approximate location), device identifiers such as the advertising ID, ad interactions and diagnostics. Vehicle information and VIN are not passed to ads.</li>
-    <li>How Google handles ad data: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
-    <li>Where required, ad consent is requested through Google UMP. You can delete or reset the advertising ID or change personalization in device Settings, Google, Ads.</li>
-  </ul>
-  <h2>4. Usage statistics — Google Analytics for Firebase</h2>
-  <ul>
-    <li>We collect usage flow such as screen changes and feature use (button/action names and success or failure). VIN, vehicle authentication key and location are not put into events.</li>
-    <li>Google may process data collected automatically by the SDK such as app instance ID, device and app information, advertising ID and approximate region from IP. We do not guarantee this is fully anonymous.</li>
-    <li>Google privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-  </ul>
-  <h2>Push notifications (Firebase Cloud Messaging)</h2>
-  <p>This app uses Google's Firebase Cloud Messaging (FCM) to receive announcements and notices sent by the developer. When you open the app, Google assigns an FCM installation ID (registration token) to this installation; the app does not send or store this value on the developer's servers. The app subscribes to notification topics for the app name and your display language, and Google processes that subscription. A notification goes with the same content to every user of the same app and language and carries no personal data. On Android 13+ the notification permission is requested only when you tap the in-app notice line or the settings row, and you can use every other feature without allowing it. You can turn notifications off at any time in the device's Settings → Apps → Notifications, and you stop receiving them when you uninstall the app.</p>
-
-  <h2>5. Our own usage monitoring — Owl Pulse</h2>
-  <ul>
-    <li>Sent to: <code>https://api.owlmakers.com/v1/pulse</code></li>
-    <li>Collected: app package name, version and display language; a random session ID created at each app start (not a device identifier); screen changes, button identifier codes and an app-active signal.</li>
-    <li>The server uses only the country/region name derived from the connecting IP for statistics and does not store the IP address or coordinates. VIN, vehicle keys, vehicle state values, names and contacts are not included.</li>
-  </ul>
-  <h2>6. Deletion and retention</h2>
-  <p>Use Settings, Apps, Storage, Clear data, or uninstall the app to remove settings, vehicle info and the authentication key on the device. Remove the enrolled key on the vehicle's own screen. Delete backup files you created with a file manager. Retention and deletion of data processed by Google SDKs follow Google's policies and your ad/analytics settings; we cannot promise to identify and delete an individual user's data there.</p>
-  <h2>7. Children and changes</h2>
-  <p>This app is not directed to children under 14. Changes to this policy are posted on this page.</p>
-  <h2>8. Contact</h2>
-  <ul>
-    <li>Developer: Owlmakers</li>
-    <li>Email: <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></li>
-  </ul>
-  <footer>© 2026 Owlmakers</footer>
+<h1>Privacy Policy — Tesla Pad</h1>
+<p class="meta">Last updated: November 19, 2026 (app version 1.0.6) · <a href="../">한국어</a></p>
+<p>Owlmakers explains how "Tesla Pad" (com.owlmakers.teslapad) handles information. This is an unofficial third-party app. It is not affiliated with, sponsored by or related to Tesla, Inc. Tesla and related names are trademarks of their owner.</p>
+<div class="callout"><strong>Summary</strong><br>
+· The app talks to your vehicle directly over Bluetooth. Your vehicle identification number (VIN) and the vehicle authentication key stay on your phone and are never sent to a server.<br>
+· The location permission is requested only because Android needs it for Bluetooth scanning. The app does not read, store or send a location value (coordinates).<br>
+· No accounts or sign-in.<br>
+· Ads (using the advertising ID), anonymous usage statistics (Google Analytics for Firebase and our own usage monitoring), abnormal-event diagnostics and push-notification subscriptions communicate with outside services. Sections 3 to 7 describe each one.</div>
+<h2>1. Information stored only on your device (not sent to the developer's servers)</h2>
+<table><thead><tr><th>Item</th><th>Details</th></tr></thead><tbody>
+<tr><td>Vehicle identification number (VIN)</td><td>The value you enter. It is used only to work out your car's Bluetooth name and to open a session with the car. It is kept encrypted in app-private secure storage and is not included in automatic backups or backup files.</td></tr>
+<tr><td>Vehicle authentication key</td><td>A key created on this phone. It is encrypted with a key protected by the Android Keystore, kept in app-private storage, never exported, and not included in backups.</td></tr>
+<tr><td>Settings, panel and automations</td><td>Language and theme, panel button layout, automation rules, screen choices, the last values you entered in Explore, power-graph history (driving distance and power values), and the in-app Log screen (buttons sent to the car and their results, latest 200 entries).</td></tr>
+<tr><td>Car Bluetooth device choice</td><td>If you use "Open the app when car Bluetooth connects": the name and Bluetooth address of the device you picked, and a recent connection log.</td></tr>
+<tr><td>Diagnostic file</td><td>Short records of events such as gear changes, connection state and fan-link decisions (numbers and short codes). They are written as a new file for each run in the <code>teslapad</code> folder under the phone's Download folder. VIN, coordinates and names are not included. The files remain after you uninstall the app, so delete them with a file manager.</td></tr>
+</tbody></table>
+<h2>2. Backup file</h2>
+<p>Whenever your settings change, the app saves a bundle of settings as a JSON file in the <code>teslapad</code> folder under the phone's Download folder. You can also create one yourself with "Back up to file now" in Settings. It exists so you can restore with "Restore from file" after reinstalling.</p>
+<ul>
+<li>Contents: the settings, panel, automations and power-graph history from section 1, the name and address of the car Bluetooth device, and the random install ID used for usage statistics (section 5).</li>
+<li>Not included: the VIN and the vehicle authentication key.</li>
+<li>The file stays on your phone and is not sent to the developer's servers. It remains after you uninstall the app, and you can delete it with a file manager. Android's system auto-backup (allowBackup) is not used.</li>
+</ul>
+<h2>3. Permissions</h2>
+<table><thead><tr><th>Permission</th><th>Purpose</th></tr></thead><tbody>
+<tr><td>Nearby devices (Bluetooth scan and connect)</td><td>To find and connect to your car, send commands and receive status.</td></tr>
+<tr><td>Location (precise)</td><td>Android requires this permission for Bluetooth scan results to be shown. The car's advertising signal is filtered out if the app declares that it never uses location for scanning, so the permission is needed for your car to be found. <strong>The app does not read, store or send a location value (coordinates).</strong> It only checks whether the phone's location service is on, for on-device diagnostics.</td></tr>
+<tr><td>Notifications</td><td>For "Notify me when my car is nearby" (off by default), for "Open the app when car Bluetooth connects", and for the "Connected to your car" notification shown during background refresh.</td></tr>
+<tr><td>Foreground service (connected device)</td><td>While the app is authenticated with your car, it shows a "Connected to your car" notification so the connection and status updates continue when the app is in the background. You can turn it off with "Keep car status updated in the background" in Settings, and it stops when the connection ends. The service itself does not read or send data.</td></tr>
+<tr><td>Receive boot completed</td><td>To restart the Bluetooth scan for "Notify me when my car is nearby" after the phone restarts.</td></tr>
+<tr><td>Display over other apps (optional)</td><td>Only if you allow it in Settings, the app comes to the front when the car Bluetooth device you chose connects. Without it, a notification is used instead. The app does not draw ads or screens on top of other apps.</td></tr>
+<tr><td>Internet and network state, advertising ID, push receive, keeping the device awake, etc.</td><td>Used by SDKs included in the app, such as ads and Google Firebase.</td></tr>
+</tbody></table>
+<p>The app does not request camera, microphone, contacts, photos, phone, SMS, accounts or full storage access. Backups are saved to the shared Download folder and need no storage permission. For restore, the app reads only a file you choose in the system file picker. Numbers you type yourself for features such as Homelink (including coordinates) are sent to the car over Bluetooth only, never to a server. They are not your phone's location.</p>
+<h2>4. Ads</h2>
+<p>The app is free and shows ads.</p>
+<ul>
+<li>Ads are loaded through Unity LevelPlay ad mediation. The app includes connectors for ad networks that LevelPlay can use (Unity Ads, Meta Audience Network, Pangle, Mintegral, Liftoff Monetize, InMobi, DT Exchange) and the Google ads SDK. Which networks actually serve ads depends on the LevelPlay configuration.</li>
+<li>To serve ads, the ad SDKs and networks may collect or share the advertising ID (a device identifier), the IP address and the approximate region estimated from it, device and app information, ad impressions and interactions, and ad-loading diagnostics. The VIN, vehicle information and location values are not passed to ads.</li>
+<li>Ads appear in a banner at the top of the screen and between sections of several screens. Full-screen ads appear only when the car is parked or not connected.</li>
+<li>In regions that require consent, such as the European Economic Area and the UK, consent is requested first through Google's User Messaging Platform (UMP) and ads are loaded afterwards. In those regions you can change your choice with "Ad privacy settings" in Settings.</li>
+<li>You can delete or reset the advertising ID, or turn off personalized ads, in your device's Settings under Google → Ads (or Privacy → Ads).</li>
+<li>How Google handles ad data: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+</ul>
+<h2>5. Usage statistics</h2>
+<h3>5-1. Google Analytics for Firebase</h3>
+<p>We collect screen changes and feature usage (identification codes of buttons and actions, and success or failure result codes) as statistics. The VIN, the vehicle authentication key, location and vehicle status values are not put into events. Google may process information the SDK collects automatically, such as the app instance ID, device and app information and the approximate region from the IP address, and we do not guarantee that it is fully anonymous. Google's policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<h3>5-2. Our own usage monitoring (Owlmakers)</h3>
+<p>To check that the app is being used normally, the app sends anonymous usage statistics to our own server (<code>https://api.owlmakers.com/v1/pulse</code>, HTTPS).</p>
+<ul>
+<li>What is sent: app name, version and display language; screen changes and button identification codes; a signal that the app is in use; ad-loading times and result codes; a random session value created at each launch; and <strong>a random install ID that is created once and stored on the phone</strong> (used only to follow the same installation across days. It is not linked to a name, account or hardware identifier. A new one is created if you clear the app's data or uninstall. Restoring a backup file may bring the same value back).</li>
+<li>From the connection, the server records only the country, region and city names. It does not store the IP address or latitude and longitude.</li>
+<li>The VIN, vehicle keys, vehicle status values, names and contact details are not sent.</li>
+<li>Data is kept for one year and then deleted automatically by the server. It is not provided to third parties.</li>
+</ul>
+<h2>6. Abnormal-event diagnostics</h2>
+<p>Only when something goes wrong in the communication with your car (stalls, timeouts, unexpected responses, internal errors), the app sends a short diagnostic line describing the situation (error type, numeric codes, internal error location) to the server in 5-2. Normal activity is not sent, and the volume is limited to 30 lines per run and 6 lines per minute. Lines containing a VIN, vehicle name, key or coordinates are not sent. Retention is the same as in 5-2.</p>
+<h2>7. Push notifications (Firebase Cloud Messaging)</h2>
+<p>We use Google Firebase Cloud Messaging to receive announcements from the developer. When you open the app, Google assigns a registration token to this installation, and the app subscribes to two notification topics: one for the app and one for your display language. The app does not send or store this token on the developer's servers. Notifications go to all users of the same app and language with the same content and contain no personal information. On Android 13 and later, the notification permission is requested only when you tap the in-app prompt or the notification row in Settings, or when you turn on "Notify me when my car is nearby", and every feature except notifications works without it.</p>
+<h2>8. App update check</h2>
+<p>The app uses Google Play's in-app update feature to check whether a new version is available. Google Play handles this check.</p>
+<h2>9. Deletion and retention</h2>
+<ul>
+<li>Settings, vehicle information and the key on your device: clear them with App info → Storage → Clear data, or by uninstalling the app. Delete the key registered on the car separately on the car's screen.</li>
+<li>Backup and diagnostic files: they remain after uninstalling, so delete them with a file manager.</li>
+<li>Because there are no accounts and the developer cannot identify users, we do not offer a separate procedure to look up and delete a specific user's information. Server usage statistics are deleted automatically after one year. Information processed by Google SDKs follows Google's policies and your ad and analytics settings.</li>
+</ul>
+<h2>10. Children</h2>
+<p>This app is not directed to people under 18 and does not knowingly collect information from children.</p>
+<h2>11. Changes</h2>
+<p>If this policy changes, we will update this page and the last-updated date.</p>
+<h2>12. Contact</h2>
+<p>Owlmakers · <a href="mailto:support@owlmakers.com">support@owlmakers.com</a></p>
+<footer>© 2026 Owlmakers</footer>
 </body>
 </html>
