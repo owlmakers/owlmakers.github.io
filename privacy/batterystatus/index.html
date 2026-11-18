@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 배터리 상태 — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+h3{font-size:1rem;margin-top:20px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+<p class="meta"><a href="./en/">English</a></p>
+<h1>개인정보처리방침 — 배터리 상태 (Battery Status)</h1>
+<p>최종 수정일: 2026-11-19</p>
+<h2>1. 요약</h2>
+<p><strong>배터리 상태는 계정도 로그인도 없습니다.</strong> 충전 기록·설정은 <strong>사용자의 기기 안에만</strong> 저장되며, 개발자는 그 내용을 볼 수 없습니다.
+이 앱이 외부로 보내는 것은 <strong>광고</strong>, <strong>Google Analytics for Firebase 익명 사용 통계</strong>, <strong>자체 익명 사용 통계</strong>, <strong>푸시 알림 구독</strong> 네 가지뿐이며 아래에 그대로 적습니다. 위치 권한은 쓰지 않습니다.</p>
+<h2>2. 기기 안에만 저장되는 것 (외부 전송 없음)</h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>왜 저장하나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>충전 기록(충전 시작·끝 시각, 충전 %, 전력·전류 값의 추이)</td>
+<td>기록 탭과 충전 곡선을 보여 주기 위해 — 앱 전용 저장소의 <code>sessions</code> 폴더</td>
+</tr>
+<tr>
+<td>배터리 사용 샘플(시각, 배터리 %, 전류, 온도, 전압, 충전 중인지·화면이 켜져 있는지·배터리 보호 중인지) — «밖에서 보기» 의 충전 표시 서비스를 켠 경우에만 쌓임</td>
+<td>흐름·건강·기록 탭의 방전 소모·온도 기록을 보여 주기 위해 — 앱 전용 저장소의 <code>samples</code> 폴더에 하루 단위 파일로 저장하고 30일이 지난 파일은 자동 삭제</td>
+</tr>
+<tr>
+<td>마지막 충전 상태와 계산 중이던 값</td>
+<td>앱을 닫았다 열어도 이어서 보여 주기 위해</td>
+</tr>
+<tr>
+<td>소수점 자릿수, 보호 한도 %, 설계 용량, 작은 창 글자 크기·투명도, 목표 % 알림, 테마·언어, 안내를 본 적 있는지</td>
+<td>사용자가 정한 설정을 유지하기 위해</td>
+</tr>
+</tbody>
+</table>
+<p>충전 기록과 배터리 사용 샘플은 <strong>개발자 서버로 전송되지 않습니다.</strong> 앱을 삭제하면 앱 전용 저장소의 값은 함께 삭제됩니다.
+기기의 Google 자동 백업이 켜져 있으면 앱 데이터가 사용자의 Google 계정 백업에 포함될 수 있으며, 이는 기기·Google 설정을 따릅니다.</p>
+<h3>백업 파일</h3>
+<p>설정 → «백업 및 복구» 의 백업은 기기의 <strong>다운로드 폴더 아래 앱 폴더</strong>에 <code>.json</code> 파일로 저장됩니다(별도 저장소 권한 없음). 이 파일에는 앱 설정 저장값만 들어 있으며, 아래 5-2항의 <strong>설치 식별자</strong>와 전송되지 않은 통계 묶음은 들어가지 않습니다. 충전 기록 파일과 배터리 사용 샘플 파일(위 첫 두 행)도 이 백업 파일에 들어가지 않습니다. 백업 파일은 사용자가 직접 지우거나 다른 곳으로 옮길 수 있으며, 개발자에게 전송되지 않습니다.</p>
+<h2>3. 기기 센서 값 읽기</h2>
+<p>배터리 %, 전압, 전류, 충전 카운터, 온도, 배터리 보호(충전 제한) 설정 여부를 안드로이드 배터리 정보에서 읽어 화면·알림·작은 창·위젯에 보여 주고 소수점 %·완충 시각·건강도(용량)·충전량과 소모량을 <strong>추정</strong>합니다. 사용자가 «밖에서 보기» 의 충전 표시 서비스를 켜면 서비스가 충전 중이거나 화면이 켜져 있는 동안 계속, 그 밖에는 시스템이 배터리 변화를 알릴 때만 값을 읽고, 화면이 켜져 있는지(시스템의 화면 켜짐·꺼짐 알림)와 함께 위 «배터리 사용 샘플» 로 기기 안에 기록합니다. 이 값은 기기 안에서만 계산·저장되며 외부로 전송하지 않습니다. 위치 정보는 사용하지 않습니다.</p>
+<h2>4. «밖에서 보기» 기능 (사용자가 켤 때만 동작)</h2>
+<ul>
+<li><strong>알림 막대와 상시 서비스</strong>: 사용자가 충전 표시 서비스를 켜면 전면 서비스(특수 용도)가 충전 연결·해제와 화면 켜짐·꺼짐을 받아, 충전 중이거나 화면이 켜져 있는 동안 계산하고 알림에 충전 %를 보여 줍니다. 기기를 다시 켠 뒤에는 자동으로 시작하지 않습니다.</li>
+<li><strong>다른 앱 위에 작은 창</strong>: 사용자가 시스템 설정에서 «다른 앱 위에 표시» 를 허용했을 때만 충전 %를 작은 창으로 보여 줍니다. 화면의 다른 앱 내용을 읽거나 수집하지 않습니다.</li>
+<li><strong>충전기를 꽂으면 앱 열기</strong>: 사용자가 설정에서 켜고 «다른 앱 위에 표시» 를 허용했을 때만, 충전기가 연결되는 순간 이 앱을 화면에 띄웁니다.</li>
+<li><strong>홈 화면 위젯, 목표 % 알림</strong>: 충전 %를 보여 주고, 정한 %에 닿으면 한 번 알려 줍니다.</li>
+<li>이 기능들에는 광고가 없습니다.</li>
+</ul>
+<h2>5. 외부로 나가는 것</h2>
+<h3>5-1. 광고 (Unity LevelPlay)</h3>
+<p>이 앱은 무료이며 광고를 표시합니다. 광고 중개 서비스 <strong>Unity LevelPlay</strong> 와 LevelPlay 가 연결하는 광고 네트워크가 광고 제공을 위해 <strong>광고 ID(기기 식별자), IP 주소, 대략적인 기기 정보</strong>를 수집할 수 있습니다. 광고는 앱 화면 안에만 나오고 알림·작은 창·위젯에는 나오지 않습니다.
+- 유럽 경제 지역(EEA)·영국 사용자에게는 앱 실행 때 동의 요청 화면(Google UMP)이 표시되며, 선택은 설정의 광고 개인정보 항목에서 다시 바꿀 수 있습니다.
+- 광고 ID 초기화·맞춤 광고 해제는 기기 설정 &gt; Google &gt; 광고 에서 할 수 있습니다.
+- Unity LevelPlay 개인정보 안내: <a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></p>
+<h3>5-2. 자체 익명 사용 통계 (Owlmakers, <code>api.owlmakers.com</code>)</h3>
+<p>앱이 정상적으로 쓰이는지 확인하기 위해 개발자 서버로 익명 사용 통계를 <strong>정식(릴리스) 앱에서만</strong> HTTPS 로 보냅니다.
+- 보내는 값: 앱 이름·버전·표시 언어, 화면 이동과 버튼·스위치 눌림의 <strong>종류 이름</strong>(예: «홈 탭 열림», «알림 막대 스위치 켬»), 작업 결과 코드(성공·실패·취소), 앱을 쓰는 중이라는 신호(약 15초마다), 광고 요청·표시에 걸린 시간, 실행마다 새로 만드는 무작위 값, 그리고 <strong>설치 식별자</strong>.
+- <strong>설치 식별자</strong>: 앱을 설치한 뒤 처음 실행할 때 한 번 만들어 기기에 저장하는 무작위 값입니다. 같은 설치를 며칠에 걸쳐 이어서 세는 데에만 쓰며, 이름·계정·기기 고유 번호와 연결되지 않습니다. 앱을 삭제하거나 앱 데이터를 지우면 새 값이 됩니다. 단, Google 자동 백업으로 앱을 복원하면 같은 값이 돌아올 수 있습니다(위 백업 파일에는 이 값이 들어가지 않습니다).
+- <strong>보내지 않는 값</strong>: 충전 %·전압·전류·온도·충전 기록·설정 값(보호 한도, 목표 % 등)·위치 좌표·이름·이메일. 서버는 접속 경로에서 <strong>국가·시·도·도시 이름</strong>만 기록하고 <strong>IP 주소는 읽지도 저장하지도 않습니다.</strong>
+- 전송이 실패하면 최대 7일, 500건까지 기기에 보관했다가 다시 보냅니다.
+- <strong>서버 보관 기간</strong>: 서버로 보낸 사용 통계는 365일이 지나면 서버가 자동으로 삭제합니다(서버가 한 시간에 한 번 오래된 행을 정리합니다). 사용 통계에는 이름·계정·IP 가 없습니다.</p>
+<h3>5-3. 사용 통계 (Google Analytics for Firebase)</h3>
+<p>어떤 화면과 기능이 쓰이는지 익명으로 집계하기 위해 Google Analytics for Firebase 를 사용합니다. 5-2 와 같은 화면·요소 이름과 결과 코드가 전달되며, Firebase 가 앱 인스턴스 ID 등 기본 분석 정보를 함께 수집할 수 있습니다. 충전 값·위치·이름·이메일은 보내지 않습니다. Google 의 처리: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></p>
+<h3>5-4. 푸시 알림 구독 (Firebase Cloud Messaging)</h3>
+<p>앱은 Firebase 알림 서비스에 <strong>앱 이름</strong>과 <strong>표시 언어</strong> 두 가지 주제(topic)로 구독합니다. 알림 토큰은 FCM 이 발급하며 개발자 서버로 올리지 않습니다. 알림을 받으려면 사용자가 시스템 알림 권한을 허용해야 하고, 거부해도 앱의 충전 확인 기능은 그대로 동작합니다.</p>
+<h2>6. 권한</h2>
+<table>
+<thead>
+<tr>
+<th>권한</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>알림</td>
+<td>알림 막대·목표 % 알림을 위해. 소개 화면의 «알림 허용» 버튼을 누르거나 설정에서 기능을 켤 때만 묻습니다</td>
+</tr>
+<tr>
+<td>전면 서비스(특수 용도)</td>
+<td>사용자가 켠 충전 표시 서비스 동안 충전 %를 계산하고 알림·작은 창·위젯을 갱신하고 방전·온도 기록을 쌓기 위해</td>
+</tr>
+<tr>
+<td>다른 앱 위에 표시 (선택)</td>
+<td>작은 창과 «충전기를 꽂으면 앱 열기» 를 켤 때만. 허용하지 않아도 나머지 기능은 동작합니다</td>
+</tr>
+<tr>
+<td>인터넷</td>
+<td>광고·통계·푸시 구독</td>
+</tr>
+</tbody>
+</table>
+<p>위치·연락처·사진·마이크·카메라 권한은 쓰지 않습니다.</p>
+<h2>7. 아동</h2>
+<p>이 앱은 아동을 대상으로 하지 않으며, 아동으로부터 개인정보를 의도적으로 수집하지 않습니다.</p>
+<h2>8. 사용자의 선택</h2>
+<ul>
+<li>앱 삭제 = 기기에 저장된 충전 기록·배터리 사용 샘플·설정 삭제. 설정의 «기록 전체 삭제» 로 충전 기록을 지울 수 있고, 배터리 사용 샘플은 30일이 지나면 자동으로 지워집니다.</li>
+<li>충전 표시 서비스, 알림 막대·작은 창·위젯·목표 알림·«충전기를 꽂으면 앱 열기» 는 모두 사용자가 켜고 끌 수 있습니다.</li>
+<li>맞춤 광고 해제·광고 ID 초기화는 기기 설정에서 할 수 있습니다.</li>
+</ul>
+<h2>9. 변경</h2>
+<p>이 방침이 바뀌면 이 페이지의 내용과 최종 수정일을 갱신합니다.</p>
+<h2>10. 문의</h2>
+<p>Owlmakers · support@owlmakers.com</p>
+<footer>Owlmakers · support@owlmakers.com</footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Battery Status — Owlmakers</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,"Malgun Gothic",sans-serif;
+max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.75;color:#1a1a1a;background:#fff}
+h1{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:12px}
+h2{font-size:1.1rem;margin-top:28px}
+h3{font-size:1rem;margin-top:20px}
+a{color:#2563eb;word-break:break-all}
+.meta{color:#666;font-size:.9rem}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.95rem}
+th,td{border:1px solid #e5e5e5;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fafafa}
+footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;font-size:.85rem}
+</style>
+</head>
+<body>
+<p class="meta"><a href="../">한국어</a></p>
+<h1>Privacy Policy — Battery Status</h1>
+<p>Last updated: 2026-11-19</p>
+<h2>1. Summary</h2>
+<p><strong>Battery Status has no account and no sign-in.</strong> Your charge history and settings are stored <strong>only on your device</strong>, and the developer cannot see them.
+The app sends data outside the device in only four ways, all described below: <strong>ads</strong>, <strong>Google Analytics for Firebase anonymous usage statistics</strong>, <strong>our own anonymous usage statistics</strong>, and <strong>push notification topic subscription</strong>. The app does not use location permission.</p>
+<h2>2. Stored only on your device (not sent anywhere)</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charge history (start and end time, charge %, power and current over time)</td>
+<td>To show the History tab and charge curves — kept in the <code>sessions</code> folder of the app's private storage</td>
+</tr>
+<tr>
+<td>Battery usage samples (time, battery %, current, temperature, voltage, and whether it was charging, the screen was on, or battery protection was on) — recorded only while the charge display service under "View outside the app" is on</td>
+<td>To show discharge and temperature records in the Flow, Health and History tabs — kept as daily files in the <code>samples</code> folder of the app's private storage, and files older than 30 days are deleted automatically</td>
+</tr>
+<tr>
+<td>Last charging state and values being calculated</td>
+<td>To continue showing them after the app is closed and reopened</td>
+</tr>
+<tr>
+<td>Decimal places, protection limit %, design capacity, small-window text size and opacity, target % alert, theme, language, whether intro screens were seen</td>
+<td>To keep the settings you chose</td>
+</tr>
+</tbody>
+</table>
+<p>Charge history and battery usage samples are <strong>not sent to the developer's server.</strong> Uninstalling the app deletes the values in the app's private storage.
+If Google's automatic backup is turned on for your device, app data may be included in your Google account backup, according to your device and Google settings.</p>
+<h3>Backup file</h3>
+<p>The backup in Settings &gt; "Backup and restore" is saved as a <code>.json</code> file in an <strong>app folder under your Downloads folder</strong> (no storage permission needed). It holds only the app's saved settings values; the <strong>install ID</strong> (section 5-2) and any usage-statistics batch that has not been sent yet are not included. The charge history and battery usage sample files (first two rows above) are not included either. You can delete or move the file yourself, and it is not sent to the developer.</p>
+<h2>3. Reading device sensor values</h2>
+<p>The app reads battery level, voltage, current, charge counter, temperature and whether battery protection (charge limit) is on from Android battery information. It shows them on screen, in the notification, the small window and widgets, and <strong>estimates</strong> the decimal %, time to full, health (capacity) and the amounts charged and used. When you turn on the charge display service under "View outside the app", the service reads these values continuously while the phone is charging or the screen is on, and otherwise only when the system announces a battery change. It also learns whether the screen is on (from the system's screen on/off notices) and records the values as the "battery usage samples" above on your device. These values are calculated and stored only on your device and are not sent. The app does not use location.</p>
+<h2>4. "View outside the app" (works only when you turn it on)</h2>
+<ul>
+<li><strong>Notification and always-on service</strong>: When you turn on the charge display service, a foreground service (special use) receives charger connect/disconnect and screen on/off events, calculates while the phone is charging or the screen is on, and shows the charge % in the notification. It does not start on its own after the device restarts.</li>
+<li><strong>Small window over other apps</strong>: Shown only if you allow "Display over other apps" in system settings. The app does not read or collect what other apps show on screen.</li>
+<li><strong>Open app when charger is connected</strong>: Only if you turn it on in Settings and allow "Display over other apps", the app is brought to the screen the moment a charger is connected.</li>
+<li><strong>Home screen widgets and target % alert</strong>: Show the charge % and notify you once when your chosen % is reached.</li>
+<li>There are no ads in these features.</li>
+</ul>
+<h2>5. What leaves your device</h2>
+<h3>5-1. Ads (Unity LevelPlay)</h3>
+<p>The app is free and shows ads. The ad mediation service <strong>Unity LevelPlay</strong> and the ad networks it connects may collect the <strong>advertising ID, IP address and approximate device information</strong> to serve ads. Ads appear only inside app screens, never in the notification, small window or widgets.
+- Users in the European Economic Area and the UK see a consent form (Google UMP) when the app starts and can change the choice later in the app's ad privacy setting.
+- You can reset the advertising ID or opt out of personalised ads in device Settings &gt; Google &gt; Ads.
+- Unity LevelPlay privacy information: <a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></p>
+<h3>5-2. Our own anonymous usage statistics (Owlmakers, <code>api.owlmakers.com</code>)</h3>
+<p>To check that the app works, the <strong>release app only</strong> sends anonymous usage statistics to the developer's server over HTTPS.
+- Sent: app name, version and display language; the <strong>kind names</strong> of screen changes and button or switch presses (for example "home tab opened", "notification switch turned on"); result codes (success, failure, cancel); a signal that the app is in use (about every 15 seconds); how long ad requests and displays took; a random value created for each launch; and the <strong>install ID</strong>.
+- <strong>Install ID</strong>: a random value created once when you first run the app after installing it and stored on your device. It is used only to count the same installation across days. It is not linked to your name, account or device serial number. Uninstalling or clearing app data gives a new value. Restoring the app from Google automatic backup can bring the same value back (the backup file above does not contain it).
+- <strong>Not sent</strong>: charge %, voltage, current, temperature, charge history, setting values (protection limit, target %, etc.), location coordinates, name or email. The server records only <strong>country, region and city names</strong> from the connection path and <strong>neither reads nor stores the IP address.</strong>
+- If sending fails, up to 500 events or 7 days are kept on the device and sent again later.
+- <strong>Server retention</strong>: usage statistics sent to the server are deleted automatically after 365 days (the server removes old rows once an hour). They contain no name, account or IP address.</p>
+<h3>5-3. Usage statistics (Google Analytics for Firebase)</h3>
+<p>We use Google Analytics for Firebase to count anonymously which screens and features are used. The same screen and element names and result codes as in 5-2 are passed, and Firebase may also collect basic analytics information such as an app instance ID. Charge values, location, name and email are not sent. Google's processing: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></p>
+<h3>5-4. Push notification topics (Firebase Cloud Messaging)</h3>
+<p>The app subscribes to two topics in Firebase Cloud Messaging: the <strong>app name</strong> and the <strong>display language</strong>. The notification token is issued by FCM and is not uploaded to the developer's server. To receive notifications you must allow the system notification permission; if you refuse, the charge monitoring features still work.</p>
+<h2>6. Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Notifications</td>
+<td>For the notification and the target % alert. Asked only when you tap "Allow notifications" on the intro screen or turn a feature on in Settings</td>
+</tr>
+<tr>
+<td>Foreground service (special use)</td>
+<td>To calculate the charge %, refresh the notification, small window and widgets, and record discharge and temperature history while you have the charge display service turned on</td>
+</tr>
+<tr>
+<td>Display over other apps (optional)</td>
+<td>Only for the small window and "Open app when charger is connected". The other features work without it</td>
+</tr>
+<tr>
+<td>Internet</td>
+<td>Ads, statistics and push topic subscription</td>
+</tr>
+</tbody>
+</table>
+<p>The app does not use location, contacts, photos, microphone or camera permissions.</p>
+<h2>7. Children</h2>
+<p>The app is not directed to children and does not knowingly collect personal information from children.</p>
+<h2>8. Your choices</h2>
+<ul>
+<li>Uninstalling deletes the charge history, battery usage samples and settings stored on the device. "Delete all history" in History deletes the charge history, and battery usage samples are deleted automatically after 30 days.</li>
+<li>The charge display service, notification, small window, widgets, target alert and "Open app when charger is connected" can each be turned on or off by you.</li>
+<li>You can opt out of personalised ads and reset the advertising ID in device settings.</li>
+</ul>
+<h2>9. Changes</h2>
+<p>If this policy changes, we update this page and the last-updated date.</p>
+<h2>10. Contact</h2>
+<p>Owlmakers · support@owlmakers.com</p>
+<footer>Owlmakers · support@owlmakers.com</footer>
+</body>
+</html>
