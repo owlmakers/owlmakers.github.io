@@ -40,6 +40,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
   <h2>4. 이용 통계</h2>
   <p>Firebase Analytics는 화면 조회와 버튼 동작의 이름·횟수를 수집합니다. SDK 자동 수집에는 설치본별 앱 인스턴스 ID·광고 ID·세션·기기와 앱 정보·IP로 추정한 대략적 지역이 포함될 수 있습니다. 저장된 번호·QR 내용·사진·백업 내용·정밀 위치는 보내지 않습니다. Google의 처리 방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
   <p>Pulse는 <a href="https://api.owlmakers.com/v1/pulse">https://api.owlmakers.com/v1/pulse</a> 로 앱 이름·버전·표시 언어·화면과 동작 이름·광고 반응·사용 중 신호를 보냅니다. 실행마다 새로 만드는 임시 세션 ID를 쓰며 영구 기기 ID는 보내지 않습니다. 서버는 IP 주소를 저장하지 않고 국가·지역·도시 이름만 집계하며, 원본 이용 통계는 1년 동안 보관한 뒤 삭제합니다. 목적은 이용 현황 분석입니다. 이 서버가 응답하지 않아도 앱 기능은 동작합니다.</p>
+  <p>설치 식별자 — 앱을 설치한 뒤 처음 실행할 때 한 번 만들어 기기에 저장하는 무작위 값입니다. 같은 설치를 며칠에 걸쳐 이어서 세는 데에만 쓰며, 이름·계정·기기 고유 번호와 연결되지 않습니다. 앱을 삭제하거나 앱 데이터를 지우면 사라지고, 기기의 자동 백업이 켜져 있는 앱에서는 다시 설치할 때 복원될 수 있습니다.</p>
   <p>QR 읽기에 쓰는 Google ML Kit는 기기·앱 정보와 설치별 식별자, 성능·오류 같은 진단 및 이용 통계 데이터를 처리할 수 있습니다. Google은 이 정보에 HTTPS를 쓰며 제3자와 공유하지 않는다고 안내합니다. 자세한 내용: <a href="https://developers.google.com/ml-kit/android-data-disclosure">https://developers.google.com/ml-kit/android-data-disclosure</a></p>
   <h2>5. 회차 정보 조회</h2>
   <p>회차 결과를 표시하기 위해 동행복권(dhlottery.co.kr)과 <code>smok95.github.io</code> 에 회차 번호가 들어간 HTTPS 요청을 보냅니다. 앱에 없는 최신 회차가 있을 때 앱을 열거나 당첨 확인 화면을 보거나 다시 시도할 때에만 조회합니다. 상대 서버에는 접속 IP가 전달될 수 있습니다. 동행복권 공식 사이트나 스토어 링크를 열거나 앱 업데이트를 받을 때에는 해당 서비스의 처리 방침이 적용됩니다.</p>

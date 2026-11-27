@@ -81,6 +81,7 @@ footer{margin-top:40px;border-top:1px solid #eee;padding-top:16px;color:#888;fon
 
   <h2>6. The developer's own usage statistics (Owlmakers)</h2>
   <p>To check that the app is working, the developer's own server receives <strong>anonymous usage statistics (including country and region)</strong> (<code>api.owlmakers.com</code>, over HTTPS). This is sent only from official release builds.</p>
+  <p>Installation identifier — A random value generated once on first launch after installation and stored on the device. It is used only to count the same installation across days and is not linked to your name, account or any hardware identifier. It is removed when you uninstall the app or clear its data; where device auto-backup is enabled it may be restored when you reinstall.</p>
   <ul>
     <li><strong>What is sent</strong>: app name, version, display language, the kind of screen movement (tab name, opening the full-screen play screen, and so on), a signal that the app is in use, the fact that an ad was tapped (ad type), and <strong>a random value generated fresh every time the app starts</strong> (it is not stored, so it does not identify you or your device).</li>
     <li><strong>What is not sent</strong>: your message text, presets, settings, clipboard content, name, email, or phone number.</li>
